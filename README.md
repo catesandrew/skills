@@ -73,6 +73,7 @@ stays out of this repo by design (see [Scope](#scope) below).
 | `graph-react-render-tree` | Readable render tree with subgraphs, fan-out list, and leaf nodes for mocking |
 | `dithered-motif-site` | Animated Bayer-dithered particle-field hero/background — prompt patterns + canvas dither engine |
 | `scroll-video-site` | Full-bleed scroll-scrubbed video landing page — damped-playhead ScrollVideo engine, Lenis+GSAP, Auto Tour |
+| `point-cloud-assembly-scene` | Three.js point-cloud scene assembling from dust — parametric shape sampling, shared-buffer multi-form architecture, fake curl-noise dust field |
 
 ### API & schemas
 
