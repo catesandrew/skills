@@ -21,9 +21,9 @@
 - [ ] Smoke-test the plugin install path end-to-end from a different repo:
       `/plugin marketplace add catesandrew/skills` then
       `/plugin install skills@skills`.
-- [ ] Consider adding a repo topic/description update on GitHub and a
-      short "why this repo exists" note if it'll be shared publicly beyond
-      personal use.
+- [x] Repo topics added on GitHub (2026-08-28): `agent-skills`,
+      `ai-agents`, `claude-code`, `codex`, `developer-tools`, `llm-tools`.
+      Description already set from repo creation, left as-is.
 
 ## Known risks / watch-outs
 
