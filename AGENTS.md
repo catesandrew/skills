@@ -55,3 +55,10 @@ skills/                       # this repo
   `${input:...}` instead, or keep the skill in a private collection.
 - Each skill has a "Common Mistakes" section where applicable.
 - Chrome DevTools skills note they require the Chrome DevTools MCP server.
+
+## Session dossiers
+
+Working-session write-ups (what changed, why, lessons, follow-ups) live in
+`.sessions/<DATE>-<slug>/`, produced by the `session-wrap` skill. Latest:
+
+- [2026-08-28-public-skills-repo-launch](.sessions/2026-08-28-public-skills-repo-launch/README.md) — repo creation + initial 49-skill migration from dotfiles
