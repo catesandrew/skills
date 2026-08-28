@@ -1,0 +1,20 @@
+{
+  "skill_name": "data-table-builder",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I need to create a new products table for our inventory system. The table should show product name, SKU, category, status (active/inactive/discontinued), price, and stock level. Users need to be able to filter by category and status (both should be dropdowns), search across name and SKU, and sort by any column. The data will come from our API so pagination needs to be server-side. Can you help me build this following the nuqs + useDataTable pattern?",
+      "expected_output": "Complete table implementation with: 1) productsTableFilterFields.tsx with category and status faceted filters plus search, 2) productsTableSearchParams.ts with typed parsers, 3) useProductsFilters.ts hook with proper reset semantics, 4) ProductsTable.tsx shell component, 5) ProductsTableColumns.tsx factory, 6) Any necessary cell components. Should use stable row IDs, server-side pagination/sorting/filtering flags, and proper separation of concerns."
+    },
+    {
+      "id": 2,
+      "prompt": "We have an existing users table that's getting messy. Right now all the filter state is managed with useState and everything is in one giant file. I want to refactor it to use nuqs for URL state and split it into proper layers. The table needs firstname, lastname, email, role (can be 'admin', 'user', 'guest'), status (active/inactive), and last login date. We need search that works on name and email, a role filter dropdown, and a status filter dropdown. The pagination is client-side since we load all users at once. Can you walk me through refactoring this?",
+      "expected_output": "Step-by-step refactoring guide that creates: 1) usersTableFilterFields.tsx with role and status faceted filters, 2) usersTableSearchParams.ts with parsers, 3) useUsersFilters.ts hook to replace useState, 4) Refactored UsersTable.tsx using useDataTable, 5) Column factory extraction, 6) Explanation of migration from useState to nuqs, setting manualPagination: false for client-side pagination."
+    },
+    {
+      "id": 3,
+      "prompt": "I'm building a services catalog table that has hierarchy - each service can have multiple versions underneath it, and we need expand/collapse functionality. The parent row shows service name, owner, and deployment count. When expanded, the child rows show version number, deployed date, and status. Users should be able to filter by owner (text input) and status (dropdown with 'deployed', 'pending', 'failed'), search across service names and versions, and the URL state needs to survive page reloads so people can share links to specific filter states. Server handles pagination but we do client-side expansion. Help me build this.",
+      "expected_output": "Hierarchical table implementation with: 1) catalogServicesTableFilterFields.tsx with owner text filter and status faceted filter, 2) catalogServicesTableSearchParams.ts, 3) useCatalogServicesFilters.ts hook, 4) CatalogServicesTable.tsx with getSubRows and getExpandedRowModel, 5) CatalogServicesColumns.tsx with ExpanderCell, 6) Proper row ID composition for hierarchy (parent.id.child.id pattern), 7) paginateExpandedRows: false, 8) autoResetAll: false to prevent expansion state loss."
+    }
+  ]
+}

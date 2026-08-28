@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "organization": "CU Direct",
+  "date": "April 2026",
+  "abstract": "Generates a conventional commit message from the staged diff and relevant recent session context, then uses that exact message to create the git commit while preserving explicit testing status and user-visible impact in the commit body.",
+  "references": [
+    "https://www.conventionalcommits.org/en/v1.0.0/",
+    "https://git-scm.com/docs/git-commit"
+  ]
+}

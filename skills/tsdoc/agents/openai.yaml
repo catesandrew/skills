@@ -1,0 +1,4 @@
+interface:
+  display_name: "TSDoc"
+  short_description: "Add inline TSDoc to staged TypeScript code"
+  default_prompt: "Use $tsdoc to add expert-level inline TSDoc to the currently staged TypeScript changes."

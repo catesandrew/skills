@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "organization": "CU Direct",
+  "date": "April 2026",
+  "abstract": "Adds inline TSDoc to staged TypeScript code with deeper documentation for exported APIs, concise comments for non-trivial internal helpers, and no intended runtime behavior changes.",
+  "references": [
+    "https://tsdoc.org",
+    "https://www.typescriptlang.org/docs/"
+  ]
+}
