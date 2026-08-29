@@ -61,6 +61,7 @@ stays out of this repo by design (see [Scope](#scope) below).
 | Skill | Description |
 |-------|-------------|
 | `frontend-quality-loop` | Iteratively raise frontend code quality — a11y, performance, type-safety, patterns lenses, loop until clean |
+| `design-critique-loop` | Screenshot self-critique loop — headless-browser vision review, complexity-upgrade rule, orchestrator/builder fan-out for N parallel builds |
 | `frontend-scaffold` | Wire frontend plumbing (feature flags, env vars, API clients, logging) into an existing project's conventions |
 | `ui-engineer` | Expert UI engineering persona — production-ready TypeScript/React/Vue/Angular, a11y, performance |
 | `generate-angular-storybook` | Angular Storybook harness, CSF3 stories, and MDX docs for a component |

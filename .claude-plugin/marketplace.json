@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "skills",
-      "description": "Personal cross-agent skills for Claude Code, Codex, and other AI coding agents — 51 skills covering browser automation/audit, React/Next.js patterns, GitHub/ADO PR workflows, and code-generation utilities, published as a single self-hosted plugin.",
+      "description": "Personal cross-agent skills for Claude Code, Codex, and other AI coding agents — 52 skills covering browser automation/audit, React/Next.js patterns, GitHub/ADO PR workflows, and code-generation utilities, published as a single self-hosted plugin.",
       "source": "./",
       "strict": false,
       "skills": [
@@ -27,6 +27,7 @@
         "./skills/chrome-run-flow",
         "./skills/commit-message",
         "./skills/data-table-builder",
+        "./skills/design-critique-loop",
         "./skills/dithered-motif-site",
         "./skills/excel-like-table-navigation",
         "./skills/frontend-quality-loop",
