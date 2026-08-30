@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-chrome-audit-css",
+  "version": "1.0.0",
+  "description": "Uses Chrome DevTools MCP to compare computed styles against authored CSS rules for a target element, revealing cascade winners, specificity conflicts, and dead or overridden declarations.",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

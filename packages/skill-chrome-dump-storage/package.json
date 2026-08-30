@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-chrome-dump-storage",
+  "version": "1.0.0",
+  "description": "Reads and summarizes browser storage state (localStorage, sessionStorage, and optionally cookie names) via Chrome DevTools MCP, automatically redacting sensitive values for debugging authentication…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

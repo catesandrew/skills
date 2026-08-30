@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-zod-repair",
+  "version": "1.0.0",
+  "description": "Refactors staged Zod schemas conservatively while preserving public contracts, and adds regression tests covering initialization cycles, map/record behavior, union drift, and parse breakage.",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

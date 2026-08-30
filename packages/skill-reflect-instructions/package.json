@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-reflect-instructions",
+  "version": "1.0.0",
+  "description": "Provides an evidence-based workflow for analyzing an AI agent instruction file such as AGENTS.md or CLAUDE.md against observed conversation failures and proposing minimal, approved improvements.",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

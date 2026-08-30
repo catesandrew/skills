@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-swagger",
+  "version": "1.0.0",
+  "description": "Adds inline Swagger/OpenAPI JSDoc to Next.js App Router API route handlers, matching the real HTTP contract without changing runtime behavior, with an optional combined mode that also adds TSDoc to…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-procfile-manager",
+  "version": "1.0.0",
+  "description": "Manages multi-process local development stacks defined in a Procfile by discovering the Procfile, parsing its processes, selecting the best available runner (Overmind, hivemind, or foreman), and…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

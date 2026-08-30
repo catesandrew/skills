@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-react-ref-callbacks",
+  "version": "1.0.0",
+  "description": "Guides using callback refs instead of useRef plus useEffect for DOM node interactions such as focusing, scrolling, measuring, or observing nodes, including React 19 ref cleanup functions and…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

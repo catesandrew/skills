@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-chrome-audit-console",
+  "version": "1.0.0",
+  "description": "Instruments a page's console via Chrome DevTools MCP, runs a reproduction flow, and collects and summarizes runtime errors and warnings such as React warnings, failed network calls, and unhandled…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

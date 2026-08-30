@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-tsdoc",
+  "version": "1.0.0",
+  "description": "Adds inline TSDoc to staged TypeScript code with deeper documentation for exported APIs, concise comments for non-trivial internal helpers, and no intended runtime behavior changes.",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

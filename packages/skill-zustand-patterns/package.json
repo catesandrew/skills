@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-zustand-patterns",
+  "version": "1.0.0",
+  "description": "Guides writing well-structured Zustand stores in React, covering atomic selector hooks, separating actions from state, event-based action design, and using React Context to scope reusable stores…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

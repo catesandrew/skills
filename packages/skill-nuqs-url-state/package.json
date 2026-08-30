@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-nuqs-url-state",
+  "version": "1.0.0",
+  "description": "Guides implementation of type-safe, shareable URL state management in Next.js applications using nuqs, covering parser registries, client and server usage, serializers, and migration from useState.",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

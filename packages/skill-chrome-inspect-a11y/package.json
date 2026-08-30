@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-chrome-inspect-a11y",
+  "version": "1.0.0",
+  "description": "Produces a live accessibility report for a running page or specific element via Chrome DevTools MCP, checking ARIA roles, names, relationships, keyboard focus, and approximate contrast against WCAG…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

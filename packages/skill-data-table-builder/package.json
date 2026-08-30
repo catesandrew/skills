@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-data-table-builder",
+  "version": "1.0.0",
+  "description": "Guides building React/Next.js data tables on a layered, type-safe architecture that separates URL state (via nuqs) from table state (via useDataTable), keeps column definitions declarative through…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

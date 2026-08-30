@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-typescript-type-safety",
+  "version": "1.0.0",
+  "description": "Guides writing safer TypeScript using compiler flags and type patterns, covering optional versus required-but-undefined semantics, safe index access, exhaustive discriminated union matching,…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-jira-estimate",
+  "version": "1.0.0",
+  "description": "Estimates how long a Jira ticket would take for AI to implement, expressed as story points and AI time, by fetching ticket details, analyzing the codebase, and scoring complexity across five weighted…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

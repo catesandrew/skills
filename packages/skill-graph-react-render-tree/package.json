@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-graph-react-render-tree",
+  "version": "1.0.0",
+  "description": "Builds a readable Mermaid render tree for a Next.js or React page, grouping components by folder boundary, deduplicating nodes, annotating render-prop and compound-component edges, and identifying…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

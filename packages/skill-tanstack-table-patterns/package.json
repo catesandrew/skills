@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-tanstack-table-patterns",
+  "version": "1.0.0",
+  "description": "Guides building production-grade tables with TanStack Table v8 in React, covering the meta object pattern, editable tables, dynamic column schemas, row validation, server-side row model ordering,…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

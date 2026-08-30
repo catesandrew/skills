@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-frontend-scaffold",
+  "version": "1.0.0",
+  "description": "Generates or wires frontend plumbing — feature flags, environment variables, API endpoint clients, or logging — into an existing project by first detecting and matching its existing conventions,…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

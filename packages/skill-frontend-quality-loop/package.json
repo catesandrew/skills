@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-frontend-quality-loop",
+  "version": "1.0.0",
+  "description": "Auto-detects a frontend project's stack from package.json and iteratively raises code quality by running accessibility, performance, type-safety, and patterns/correctness review lenses, applying…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

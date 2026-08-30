@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-ai-governance",
+  "version": "1.0.0",
+  "description": "Tracks AI coding session metrics and adds standardized attribution trailers to commits and pull requests, generating a session report for auditability, cost estimation, and ROI measurement across any…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

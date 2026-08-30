@@ -121,7 +121,7 @@ As a Claude Code plugin marketplace:
 
 ```
 /plugin marketplace add catesandrew/skills
-/plugin install skills@skills
+/plugin install cw@skills
 ```
 
 Or via the [`skills`](https://www.npmjs.com/package/skills) CLI (Agent Skills

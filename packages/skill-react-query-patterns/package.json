@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-react-query-patterns",
+  "version": "1.0.0",
+  "description": "Guides writing correct, performant TanStack React Query v5 code, covering query key design, mutation and cache invalidation patterns, render optimizations, TypeScript type safety, and the mental…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

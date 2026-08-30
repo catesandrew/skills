@@ -1,12 +1,12 @@
 {
   "name": "skills",
   "owner": {
-    "name": "Andrew Cates"
+    "name": "Personal"
   },
   "plugins": [
     {
-      "name": "skills",
-      "description": "Personal cross-agent skills for Claude Code, Codex, and other AI coding agents — 52 skills covering browser automation/audit, React/Next.js patterns, GitHub/ADO PR workflows, and code-generation utilities, published as a single self-hosted plugin.",
+      "name": "cw",
+      "description": "52 skills, distributed via the cw plugin command prefix.",
       "source": "./",
       "strict": false,
       "skills": [

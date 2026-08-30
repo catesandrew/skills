@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-nextjs-react-query-cache-coordination",
+  "version": "1.0.0",
+  "description": "Coordinates Next.js App Router caching layers with React Query to guarantee read-your-own-writes, covering Router Cache versus Data Cache, updateTag versus revalidateTag, hydration timestamp races,…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

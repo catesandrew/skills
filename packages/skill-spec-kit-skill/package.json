@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-spec-kit-skill",
+  "version": "1.0.0",
+  "description": "Integrates the GitHub Spec-Kit CLI's seven-phase constitution-driven workflow for feature development, covering constitution, specify, clarify, plan, tasks, analyze, and implement phases within the…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-chrome-audit-bundles",
+  "version": "1.0.0",
+  "description": "Uses Chrome DevTools MCP to collect and sort resource timing data for a page, identifying oversized JavaScript/CSS bundles, missing cache headers, and protocol inefficiencies.",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-design-critique-loop",
+  "version": "1.0.0",
+  "description": "Runs an iterative screenshot self-critique loop that renders a frontend build with a headless browser, reviews the screenshots with vision like an adversarial design director, fixes what it finds,…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

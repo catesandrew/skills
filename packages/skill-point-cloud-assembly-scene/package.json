@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-point-cloud-assembly-scene",
+  "version": "1.0.0",
+  "description": "Builds WebGL/Three.js scenes composed entirely of parametrically sampled points that drift as loose dust and assemble into shape on scroll or interaction, covering arc-length-accurate shape…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

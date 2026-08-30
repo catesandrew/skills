@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-chrome-inspect-element",
+  "version": "1.0.0",
+  "description": "Deeply inspects a single DOM element via Chrome DevTools MCP, retrieving computed styles, layout box, accessibility properties, and outerHTML, and saving a screenshot for diagnosing layout or CSS…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

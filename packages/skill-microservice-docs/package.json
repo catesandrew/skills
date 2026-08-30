@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-microservice-docs",
+  "version": "1.0.0",
+  "description": "Generates and maintains comprehensive, production-grade microservice documentation purely from static code analysis, covering READMEs, C4 architecture diagrams, API contracts, OpenAPI specs, data…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

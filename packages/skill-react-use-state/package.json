@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-react-use-state",
+  "version": "1.0.0",
+  "description": "Guides correct useState and useReducer usage in React, covering avoiding derived state, syncing props to state via keys instead of effects, functional updaters, lazy initializers, and choosing…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

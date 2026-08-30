@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-session-wrap",
+  "version": "1.0.0",
+  "description": "Wraps up a working session into a durable dossier containing a resume pointer, summary, lessons learned, architecture notes, ADRs, follow-ups, and a sanitized public blog post, reconstructed from git…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

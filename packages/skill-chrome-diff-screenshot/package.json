@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-chrome-diff-screenshot",
+  "version": "1.0.0",
+  "description": "Captures a targeted element or full-page screenshot via Chrome DevTools MCP and compares it against a saved baseline for visual regression testing, reporting a pixel mismatch percentage or pass/fail…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

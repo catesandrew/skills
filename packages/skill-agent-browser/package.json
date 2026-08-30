@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-agent-browser",
+  "version": "1.0.0",
+  "description": "Provides a fast CLI for browser automation over Chrome/Chromium via CDP, using accessibility-tree snapshots and compact element references to navigate pages, click, fill forms, take screenshots, and…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

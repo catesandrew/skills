@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-excel-like-table-navigation",
+  "version": "1.0.0",
+  "description": "Implements Excel-like keyboard navigation for React tables using a roving tabindex, a cell-registration system, arrow/Tab/Enter/Escape handling, and a two-layer core-hook plus adapter design that…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

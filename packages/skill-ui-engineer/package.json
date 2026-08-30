@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-ui-engineer",
+  "version": "1.0.0",
+  "description": "Provides an expert UI engineering persona for implementing production-ready frontend solutions with TypeScript and modern frameworks, covering component architecture, state management, accessibility,…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

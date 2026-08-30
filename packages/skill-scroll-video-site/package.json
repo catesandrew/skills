@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-scroll-video-site",
+  "version": "1.0.0",
+  "description": "Builds a full-bleed, scroll-scrubbed video landing page where scroll position maps to a video's currentTime, covering a damped-playhead seek-coalescing engine, Lenis smooth scrolling wired through…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-react-hooks-closures",
+  "version": "1.0.0",
+  "description": "Guides writing correct React hooks code that avoids stale closures, covering dependency array discipline, React.memo comparison pitfalls, the latest ref pattern, and the experimental useEffectEvent…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

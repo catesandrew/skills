@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-react-component-patterns",
+  "version": "1.0.0",
+  "description": "Guides the design of better React component APIs and structure, favoring early returns over inline conditional rendering for mutually exclusive states and discriminated unions over boolean prop flags…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-audit-a11y-code",
+  "version": "1.0.0",
+  "description": "Performs a static, source-code accessibility review of a component or template, checking semantic structure, ARIA usage, keyboard access, forms, tables, and contrast against WCAG 2.1 AA criteria.",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

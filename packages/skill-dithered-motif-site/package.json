@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-dithered-motif-site",
+  "version": "1.0.0",
+  "description": "Provides the full pipeline for building an animated, pointer-reactive, Bayer-dithered dot-field background from a described subject, covering Higgsfield image and video prompt authoring, ffmpeg frame…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

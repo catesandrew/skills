@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-chrome-audit-performance",
+  "version": "1.0.0",
+  "description": "Uses the Performance API via Chrome DevTools MCP to snapshot navigation timing, Core Web Vitals (FCP, LCP), and the largest resource contributors for a page, as a fast baseline alternative to a full…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-react-query-cache-determinism",
+  "version": "1.0.0",
+  "description": "Provides patterns for deterministic React Query cache updates on CRUD mutations, covering cancel-in-flight requests, updating all related caches, correct merge semantics for patch versus create,…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

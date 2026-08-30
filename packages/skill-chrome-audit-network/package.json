@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-chrome-audit-network",
+  "version": "1.0.0",
+  "description": "Captures and summarizes network activity for a page or user flow via Chrome DevTools MCP, identifying slow requests, large payloads, and API call patterns grouped by initiator type.",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

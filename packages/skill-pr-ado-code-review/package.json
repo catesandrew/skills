@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-pr-ado-code-review",
+  "version": "1.0.0",
+  "description": "Performs a systematic, file-by-file review of an Azure DevOps pull request and posts inline thread comments plus a vote directly to the PR via the Azure CLI and REST API, prioritizing correctness,…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

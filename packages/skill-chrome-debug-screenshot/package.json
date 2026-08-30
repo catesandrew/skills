@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-chrome-debug-screenshot",
+  "version": "1.0.0",
+  "description": "Systematically diagnoses failing Chrome DevTools MCP screenshot calls by trying multiple path, uid, frame, and clip parameter combinations in order and reporting which one works.",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

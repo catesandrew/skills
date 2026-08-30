@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-pr-gh-code-review",
+  "version": "1.0.0",
+  "description": "Performs a systematic, file-by-file review of a GitHub pull request and posts inline comments plus a verdict directly to the PR via the GitHub CLI and API, prioritizing correctness, security,…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}
