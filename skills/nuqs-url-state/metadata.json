@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Guides implementation of type-safe, shareable URL state management in Next.js applications using nuqs, covering parser registries, client and server usage, serializers, and migration from useState."
+}

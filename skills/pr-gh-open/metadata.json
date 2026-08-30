@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Pushes the active branch and opens a GitHub pull request with a structured description, linked ticket, reviewers, and labels in a single pass."
+}

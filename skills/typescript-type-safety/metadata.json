@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Guides writing safer TypeScript using compiler flags and type patterns, covering optional versus required-but-undefined semantics, safe index access, exhaustive discriminated union matching, containing any, as const usage, and Array<T> versus T[] syntax.",
+  "references": ["references/patterns.md"]
+}

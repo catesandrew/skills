@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Auto-detects a frontend project's stack from package.json and iteratively raises code quality by running accessibility, performance, type-safety, and patterns/correctness review lenses, applying fixes, and looping until two consecutive rounds are clean and a build/typecheck/test verification gate passes."
+}

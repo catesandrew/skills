@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Builds a readable Mermaid render tree for a Next.js or React page, grouping components by folder boundary, deduplicating nodes, annotating render-prop and compound-component edges, and identifying leaf nodes to mock in tests."
+}

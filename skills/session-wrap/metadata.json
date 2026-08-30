@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Wraps up a working session into a durable dossier containing a resume pointer, summary, lessons learned, architecture notes, ADRs, follow-ups, and a sanitized public blog post, reconstructed from git evidence rather than memory.",
+  "references": ["references/ARCHITECTURE.md", "references/SUMMARY.md", "references/BLOG.md", "references/LESSONS.md", "references/handoff-README.md", "references/FOLLOWUPS.md", "references/adr-template.md"]
+}

@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Captures and summarizes network activity for a page or user flow via Chrome DevTools MCP, identifying slow requests, large payloads, and API call patterns grouped by initiator type."
+}

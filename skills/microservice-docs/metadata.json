@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Generates and maintains comprehensive, production-grade microservice documentation purely from static code analysis, covering READMEs, C4 architecture diagrams, API contracts, OpenAPI specs, data models, sequence diagrams, dependencies, data lineage, and infrastructure docs.",
+  "references": ["references/MERMAID-EXAMPLES.md", "references/ARCHITECTURE-TEMPLATES.md", "references/DOCUMENTATION-INDEX-TEMPLATE.md", "references/LANGUAGE-EXAMPLES.md", "references/API-CONTRACT-TEMPLATE.md", "references/DATA-MODEL-TEMPLATES.md", "references/OPENAPI-SPEC-TEMPLATE.md", "references/INFRASTRUCTURE-TEMPLATES.md", "references/DEPENDENCY-TEMPLATES.md", "references/DATA-LINEAGE-TEMPLATES.md", "references/PROJECT-OVERVIEW-TEMPLATE.md", "references/SEQUENCE-DIAGRAM-TEMPLATES.md"]
+}

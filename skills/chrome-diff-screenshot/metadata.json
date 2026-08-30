@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Captures a targeted element or full-page screenshot via Chrome DevTools MCP and compares it against a saved baseline for visual regression testing, reporting a pixel mismatch percentage or pass/fail status."
+}

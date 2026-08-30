@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Guides writing correct, performant TanStack React Query v5 code, covering query key design, mutation and cache invalidation patterns, render optimizations, TypeScript type safety, and the mental model of treating server state as cache.",
+  "references": ["references/render-performance.md", "references/typescript.md", "references/query-keys.md"]
+}

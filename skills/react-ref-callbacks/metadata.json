@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Guides using callback refs instead of useRef plus useEffect for DOM node interactions such as focusing, scrolling, measuring, or observing nodes, including React 19 ref cleanup functions and ResizeObserver usage."
+}

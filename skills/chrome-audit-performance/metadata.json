@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Uses the Performance API via Chrome DevTools MCP to snapshot navigation timing, Core Web Vitals (FCP, LCP), and the largest resource contributors for a page, as a fast baseline alternative to a full Lighthouse run."
+}

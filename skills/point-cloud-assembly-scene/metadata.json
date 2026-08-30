@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Builds WebGL/Three.js scenes composed entirely of parametrically sampled points that drift as loose dust and assemble into shape on scroll or interaction, covering arc-length-accurate shape generation, a single shared buffer geometry with per-point assembly attributes, fake curl-noise turbulence, and rendering pitfalls like frustum culling and sentinel-vector bugs."
+}

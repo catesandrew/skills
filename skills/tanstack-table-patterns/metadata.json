@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Guides building production-grade tables with TanStack Table v8 in React, covering the meta object pattern, editable tables, dynamic column schemas, row validation, server-side row model ordering, state-reset prevention during edits, and shadcn DataTable integration.",
+  "references": ["references/shadcn-integration.md", "references/editable-tables.md"]
+}

@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Coordinates Next.js App Router caching layers with React Query to guarantee read-your-own-writes, covering Router Cache versus Data Cache, updateTag versus revalidateTag, hydration timestamp races, initialData pitfalls, and monotonic cache timestamps."
+}

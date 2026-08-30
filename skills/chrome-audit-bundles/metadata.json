@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Uses Chrome DevTools MCP to collect and sort resource timing data for a page, identifying oversized JavaScript/CSS bundles, missing cache headers, and protocol inefficiencies."
+}

@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Guides writing correct React hooks code that avoids stale closures, covering dependency array discipline, React.memo comparison pitfalls, the latest ref pattern, and the experimental useEffectEvent hook.",
+  "references": ["references/patterns.md"]
+}

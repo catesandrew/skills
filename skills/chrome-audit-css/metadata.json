@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Uses Chrome DevTools MCP to compare computed styles against authored CSS rules for a target element, revealing cascade winners, specificity conflicts, and dead or overridden declarations."
+}

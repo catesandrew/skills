@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Guides the design of better React component APIs and structure, favoring early returns over inline conditional rendering for mutually exclusive states and discriminated unions over boolean prop flags to avoid impossible states."
+}

@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Performs a systematic, file-by-file review of an Azure DevOps pull request and posts inline thread comments plus a vote directly to the PR via the Azure CLI and REST API, prioritizing correctness, security, performance, and style findings."
+}

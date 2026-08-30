@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Systematically diagnoses failing Chrome DevTools MCP screenshot calls by trying multiple path, uid, frame, and clip parameter combinations in order and reporting which one works."
+}

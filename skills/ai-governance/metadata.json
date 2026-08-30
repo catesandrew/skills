@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Tracks AI coding session metrics and adds standardized attribution trailers to commits and pull requests, generating a session report for auditability, cost estimation, and ROI measurement across any AI coding agent."
+}

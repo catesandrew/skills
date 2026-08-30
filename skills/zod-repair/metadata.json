@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Refactors staged Zod schemas conservatively while preserving public contracts, and adds regression tests covering initialization cycles, map/record behavior, union drift, and parse breakage."
+}

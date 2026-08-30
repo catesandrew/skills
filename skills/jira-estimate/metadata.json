@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Estimates how long a Jira ticket would take for AI to implement, expressed as story points and AI time, by fetching ticket details, analyzing the codebase, and scoring complexity across five weighted factors."
+}

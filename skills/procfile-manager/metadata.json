@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Manages multi-process local development stacks defined in a Procfile by discovering the Procfile, parsing its processes, selecting the best available runner (Overmind, hivemind, or foreman), and routing start/stop/restart/log operations through it."
+}

@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Integrates the GitHub Spec-Kit CLI's seven-phase constitution-driven workflow for feature development, covering constitution, specify, clarify, plan, tasks, analyze, and implement phases within the .specify/ directory structure."
+}

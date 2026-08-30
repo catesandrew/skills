@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Performs a systematic, file-by-file review of a GitHub pull request and posts inline comments plus a verdict directly to the PR via the GitHub CLI and API, prioritizing correctness, security, performance, and style findings."
+}

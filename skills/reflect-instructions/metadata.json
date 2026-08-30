@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Provides an evidence-based workflow for analyzing an AI agent instruction file such as AGENTS.md or CLAUDE.md against observed conversation failures and proposing minimal, approved improvements."
+}

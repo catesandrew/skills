@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Generates an Angular component's Storybook integration — a harness component, a CSF3 stories file, and MDX documentation — deriving file paths, names, and selectors automatically from a single component file path."
+}

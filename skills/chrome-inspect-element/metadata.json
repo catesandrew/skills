@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Deeply inspects a single DOM element via Chrome DevTools MCP, retrieving computed styles, layout box, accessibility properties, and outerHTML, and saving a screenshot for diagnosing layout or CSS inheritance issues."
+}

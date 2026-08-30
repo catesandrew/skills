@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Produces a live accessibility report for a running page or specific element via Chrome DevTools MCP, checking ARIA roles, names, relationships, keyboard focus, and approximate contrast against WCAG criteria."
+}

@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Guides building React/Next.js data tables on a layered, type-safe architecture that separates URL state (via nuqs) from table state (via useDataTable), keeps column definitions declarative through factories, and externalizes complex cell behavior into standalone components."
+}

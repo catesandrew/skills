@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Executes an ordered sequence of user interactions such as clicks, typing, selecting, and checking via Chrome DevTools MCP, then captures a screenshot of the resulting UI state to quickly validate a micro-flow."
+}

@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Guides writing well-structured Zustand stores in React, covering atomic selector hooks, separating actions from state, event-based action design, and using React Context to scope reusable stores instead of global singletons."
+}

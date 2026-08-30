@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Pushes the active branch and opens an Azure DevOps pull request with a structured description, linked work items, reviewers, and optional auto-complete policy in a single pass."
+}

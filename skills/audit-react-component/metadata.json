@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Reviews a React component for hooks correctness, render performance, memoization, controlled vs. uncontrolled inputs, props stability, and React 18/19 compatibility, producing actionable fixes and test suggestions."
+}

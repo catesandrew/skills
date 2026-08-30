@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Guides correct useState and useReducer usage in React, covering avoiding derived state, syncing props to state via keys instead of effects, functional updaters, lazy initializers, and choosing between useState and useReducer.",
+  "references": ["references/use-reducer-patterns.md"]
+}

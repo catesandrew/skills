@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Performs a static, source-code accessibility review of a component or template, checking semantic structure, ARIA usage, keyboard access, forms, tables, and contrast against WCAG 2.1 AA criteria."
+}

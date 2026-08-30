@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Builds a directed Mermaid component dependency graph for a Next.js or React page by recursively tracing JSX usage, render props, and compound components from a page entry point, prioritizing coverage over readability."
+}

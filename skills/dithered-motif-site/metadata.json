@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Provides the full pipeline for building an animated, pointer-reactive, Bayer-dithered dot-field background from a described subject, covering Higgsfield image and video prompt authoring, ffmpeg frame extraction, the canvas dither engine, looping strategies, pointer interaction, and page composition.",
+  "references": ["references/image-prompts.md", "references/dither-engine.ts", "references/video-prompts.md", "references/frame-extraction.md", "references/dither-engine.md"]
+}

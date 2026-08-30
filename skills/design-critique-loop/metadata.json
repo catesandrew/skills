@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Runs an iterative screenshot self-critique loop that renders a frontend build with a headless browser, reviews the screenshots with vision like an adversarial design director, fixes what it finds, and adds a deliberate complexity upgrade each pass; also covers scaling the same loop to many parallel builds with an orchestrator/builder split and a diversity constraint.",
+  "references": ["references/screenshot-harness.md"]
+}

@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Provides a fast CLI for browser automation over Chrome/Chromium via CDP, using accessibility-tree snapshots and compact element references to navigate pages, click, fill forms, take screenshots, and scrape data."
+}

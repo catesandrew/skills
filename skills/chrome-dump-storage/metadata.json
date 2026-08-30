@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Reads and summarizes browser storage state (localStorage, sessionStorage, and optionally cookie names) via Chrome DevTools MCP, automatically redacting sensitive values for debugging authentication and persisted state."
+}

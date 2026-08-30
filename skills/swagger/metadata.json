@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Adds inline Swagger/OpenAPI JSDoc to Next.js App Router API route handlers, matching the real HTTP contract without changing runtime behavior, with an optional combined mode that also adds TSDoc to the same file."
+}

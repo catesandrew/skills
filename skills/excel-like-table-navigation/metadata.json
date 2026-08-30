@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "August 2026",
+  "abstract": "Implements Excel-like keyboard navigation for React tables using a roving tabindex, a cell-registration system, arrow/Tab/Enter/Escape handling, and a two-layer core-hook plus adapter design that works with any table library providing cell refs."
+}
