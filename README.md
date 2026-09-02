@@ -13,8 +13,11 @@ stack-agnostic. Anything tied to a specific employer, client, or machine path
 stays out of this repo by design (see [Scope](#scope) below).
 
 Every skill below also has a deep-dive doc page — what it does, how to use
-it, gotchas, and (where real history supports it) why it exists — in the
-[`website/`](website/) Docusaurus site. Run it locally:
+it, gotchas, and (where real history supports it) why it exists.
+
+**[Read the docs →](https://skills.catesworks.dev/)**
+
+Or run the [`website/`](website/) Docusaurus site locally:
 
 ```sh
 pnpm --filter website start
