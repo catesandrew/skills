@@ -1,0 +1,30 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.hero {
+  padding: 4rem 0 2rem;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 2.75rem;
+  max-width: 40rem;
+  margin: 0 auto 1rem;
+}
+
+.heroSubtitle {
+  max-width: 42rem;
+  margin: 0 auto 1.5rem;
+  font-size: 1.15rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.heroCtas {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
