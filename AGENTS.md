@@ -61,4 +61,5 @@ skills/                       # this repo
 Working-session write-ups (what changed, why, lessons, follow-ups) live in
 `.sessions/<DATE>-<slug>/`, produced by the `session-wrap` skill. Latest:
 
+- [2026-09-02-skills-docs-site](.sessions/2026-09-02-skills-docs-site/README.md) — Docusaurus docs site, 52 archaeology-grounded deep-dive pages, deployed to skills.catesworks.dev
 - [2026-08-28-public-skills-repo-launch](.sessions/2026-08-28-public-skills-repo-launch/README.md) — repo creation + initial 49-skill migration from dotfiles
