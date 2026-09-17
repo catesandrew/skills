@@ -48,6 +48,7 @@ jobs:
       - run: node bin/sync-skill-content.mjs --all
       - run: node bin/validate-skill-package.mjs --all
       - run: node bin/generate-marketplace.mjs --prefix cw
+      - run: diff skills/architecture-corpus/references/corpus-contract.md skills/runbook-from-corpus/references/corpus-contract.md
       - run: git diff --exit-code
 
   # Runs on push to main: opens/updates the Changesets Version PR, and once

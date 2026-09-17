@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-architecture-corpus",
+  "version": "1.0.0",
+  "description": "Builds an evidence-cited ([C]/[I]/[U]-tagged) architecture documentation corpus — a platform README, one doc per repo or workspace package, and a machine-parseable dependency graph — from static…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

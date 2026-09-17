@@ -41,8 +41,10 @@ skills/                       # this repo
    `references/` directory.
 3. Variables use `${input:variableName:default}` syntax for user-provided
    inputs.
-4. Add the new skill's path to `.claude-plugin/marketplace.json`'s `skills`
-   array, and to the appropriate table in `README.md`.
+4. Regenerate `.claude-plugin/marketplace.json` by running
+   `node bin/generate-marketplace.mjs --prefix cw` (it is fully generated
+   from `skills/` — do not hand-edit it), and add a row to the
+   appropriate table in `README.md` (hand-maintained).
 5. If installed via the `skills` CLI, re-run `skills add -g catesandrew/skills`
    after changes to update the local installation.
 

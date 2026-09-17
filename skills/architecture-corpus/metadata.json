@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "September 2026",
+  "abstract": "Builds an evidence-cited ([C]/[I]/[U]-tagged) architecture documentation corpus — a platform README, one doc per repo or workspace package, and a machine-parseable dependency graph — from static analysis across multiple sibling repositories, including repos that are themselves pnpm/turbo/Nx/Cargo/Go workspaces with several independently addressable packages. Unlike microservice-docs, which documents one service from prescriptive templates, this skill covers a multi-repo fleet and grades every claim by evidence quality.",
+  "references": [
+    "references/corpus-contract.md",
+    "references/workspace-markers.md",
+    "references/stack-detection.md",
+    "references/per-repo-doc-template.md",
+    "references/operations-surface-markers.md",
+    "references/diagram-examples.md"
+  ]
+}

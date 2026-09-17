@@ -118,6 +118,8 @@ pnpm --filter website start
 | `reflect-instructions` | Analyze and improve an agent instruction file based on observed failures |
 | `spec-kit-skill` | GitHub Spec-Kit integration for constitution-based spec-driven development |
 | `procfile-manager` | Manage multi-process dev stacks via Procfile (Overmind/foreman/hivemind) |
+| `architecture-corpus` | Build an evidence-cited architecture documentation corpus across sibling repos, including embedded pnpm/turbo/Nx/Cargo/Go workspaces |
+| `runbook-from-corpus` | Generate a symptom-first incident runbook strictly grounded in an existing architecture corpus |
 
 ## Scope
 
@@ -149,7 +151,9 @@ skills add -g catesandrew/skills
 1. Create `skills/<skill-name>/SKILL.md` with `name` and `description`
    frontmatter (`name` must be kebab-case and match the directory name;
    `description` should start with "Use when...").
-2. Add the new skill's path to `.claude-plugin/marketplace.json`.
+2. Regenerate `.claude-plugin/marketplace.json` by running
+   `node bin/generate-marketplace.mjs --prefix cw` — it is fully
+   generated from `skills/`, so don't hand-edit it.
 3. Keep `SKILL.md` under 500 lines — move heavy reference material to a
    `references/` directory.
 4. No hardcoded org/client names, internal URLs, or absolute machine paths —

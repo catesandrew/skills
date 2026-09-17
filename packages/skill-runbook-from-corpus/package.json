@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-runbook-from-corpus",
+  "version": "1.0.0",
+  "description": "Generates a symptom-first incident triage and recovery runbook strictly grounded in an existing multi-repo architecture corpus (e.g. one built by architecture-corpus), citing the corpus rather than…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}
