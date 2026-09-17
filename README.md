@@ -1,5 +1,7 @@
 # skills
 
+**Tags:** `skills` `monorepo`
+
 Personal cross-agent skills for Claude Code, Codex, and other AI coding
 agents. Skills follow the [Agent Skills](https://agentskills.io/) format and
 are also published as a self-hosted Claude Code plugin marketplace (see
