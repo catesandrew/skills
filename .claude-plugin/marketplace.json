@@ -6,12 +6,13 @@
   "plugins": [
     {
       "name": "cw",
-      "description": "52 skills, distributed via the cw plugin command prefix.",
+      "description": "54 skills, distributed via the cw plugin command prefix.",
       "source": "./",
       "strict": false,
       "skills": [
         "./skills/agent-browser",
         "./skills/ai-governance",
+        "./skills/architecture-corpus",
         "./skills/audit-a11y-code",
         "./skills/audit-react-component",
         "./skills/chrome-audit-bundles",
@@ -52,6 +53,7 @@
         "./skills/react-ref-callbacks",
         "./skills/react-use-state",
         "./skills/reflect-instructions",
+        "./skills/runbook-from-corpus",
         "./skills/scroll-video-site",
         "./skills/session-wrap",
         "./skills/spec-kit-skill",

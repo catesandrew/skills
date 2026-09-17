@@ -16,6 +16,8 @@ importers:
 
   packages/skill-ai-governance: {}
 
+  packages/skill-architecture-corpus: {}
+
   packages/skill-audit-a11y-code: {}
 
   packages/skill-audit-react-component: {}
@@ -95,6 +97,8 @@ importers:
   packages/skill-react-use-state: {}
 
   packages/skill-reflect-instructions: {}
+
+  packages/skill-runbook-from-corpus: {}
 
   packages/skill-scroll-video-site: {}
 

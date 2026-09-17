@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "September 2026",
+  "abstract": "Generates a symptom-first incident triage and recovery runbook strictly grounded in an existing multi-repo architecture corpus (e.g. one built by architecture-corpus), citing the corpus rather than re-deriving from source, with a monorepo-aware appendix for failures spanning multiple packages inside one workspace repo. Unlike microservice-docs, which documents a single service with no evidence tagging, this skill produces an on-call runbook for a documented multi-repo fleet and never invents tooling or procedures the corpus doesn't support.",
+  "references": [
+    "references/corpus-contract.md",
+    "references/section-templates.md"
+  ]
+}
