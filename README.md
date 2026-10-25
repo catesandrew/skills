@@ -114,6 +114,7 @@ pnpm --filter website start
 | Skill | Description |
 |-------|-------------|
 | `jira-estimate` | Estimate AI implementation time for a Jira ticket using weighted complexity scoring |
+| `ask-me` | Turn a summary's open questions into multiple-choice prompts with recommendation ratings; explain discrepancies first |
 | `session-wrap` | Wrap a session into a dated dossier — resume pointer, summary, lessons, architecture, ADRs, follow-ups, sanitized blog post |
 | `reflect-instructions` | Analyze and improve an agent instruction file based on observed failures |
 | `spec-kit-skill` | GitHub Spec-Kit integration for constitution-based spec-driven development |
