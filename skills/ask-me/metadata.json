@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "October 2026",
+  "abstract": "Turns the open questions and discrepancies from a session summary into multiple-choice prompts with recommendation ratings, explaining discrepancies first.",
+  "references": []
+}
