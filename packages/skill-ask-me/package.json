@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-ask-me",
+  "version": "1.0.0",
+  "description": "Turns the open questions and discrepancies from a session summary into multiple-choice prompts with recommendation ratings, explaining discrepancies first.",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}
