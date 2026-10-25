@@ -18,6 +18,8 @@ importers:
 
   packages/skill-architecture-corpus: {}
 
+  packages/skill-ask-me: {}
+
   packages/skill-audit-a11y-code: {}
 
   packages/skill-audit-react-component: {}
