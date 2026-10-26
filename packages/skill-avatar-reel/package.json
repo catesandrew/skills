@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-avatar-reel",
+  "version": "1.0.0",
+  "description": "Turns a script with [bracket] editor cues into a finished 9:16 avatar reel: HeyGen avatar generation by name, local word-level Whisper timestamps (Fish Audio optional), cue-to-timestamp mapping with…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

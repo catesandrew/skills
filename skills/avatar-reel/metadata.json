@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "October 2026",
+  "abstract": "Turns a script with [bracket] editor cues into a finished 9:16 avatar reel: HeyGen avatar generation by name, local word-level Whisper timestamps (Fish Audio optional), cue-to-timestamp mapping with an approval gate, Remotion kinetic captions/title cards/stat callouts with selectable dark/light/punch templates and configurable avatar framing, and FFmpeg dead-air trimming, SFX/music mixing and export."
+}

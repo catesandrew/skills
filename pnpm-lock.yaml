@@ -24,6 +24,8 @@ importers:
 
   packages/skill-audit-react-component: {}
 
+  packages/skill-avatar-reel: {}
+
   packages/skill-chrome-audit-bundles: {}
 
   packages/skill-chrome-audit-console: {}
