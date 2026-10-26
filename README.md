@@ -87,6 +87,7 @@ pnpm --filter website start
 | `graph-react-render-tree` | Readable render tree with subgraphs, fan-out list, and leaf nodes for mocking |
 | `dithered-motif-site` | Animated Bayer-dithered particle-field hero/background — prompt patterns + canvas dither engine |
 | `scroll-video-site` | Full-bleed scroll-scrubbed video landing page — damped-playhead ScrollVideo engine, Lenis+GSAP, Auto Tour |
+| `cinematic-scroll-site` | End-to-end cinematic scroll-site pipeline — tiered AI hero video, cost-gated generation, design package, ffmpeg encode, static build, copy gate, publish |
 | `avatar-reel` | Script with [bracket] cues → HeyGen avatar → kinetic-caption 9:16 reel (Remotion + FFmpeg), local Whisper timestamps, approval gate |
 | `point-cloud-assembly-scene` | Three.js point-cloud scene assembling from dust — parametric shape sampling, shared-buffer multi-form architecture, fake curl-noise dust field |
 

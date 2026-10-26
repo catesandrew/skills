@@ -1,0 +1,53 @@
+<!doctype html>
+<!-- Starter for cinematic-scroll-site. Replace every {{placeholder}} from the design package; copy ships verbatim. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:image" content="{{live-url}}/assets/poster.jpg">
+<meta property="og:url" content="{{live-url}}">
+<style>
+  :root { --bg:#0e0d0c; --text:#f3efe8; --muted:#a39d93; --accent:#d9a441; } /* replace with palette tokens; never pure black or white */
+  * { box-sizing: border-box; margin: 0; }
+  html { background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; }
+  #hero { height: 500vh; position: relative; } /* scroll length of the scrub; tune with the flick test */
+  .stage { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+  .stage video, .stage .poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .poster { display: none; }
+  .band { position: absolute; left: 6vw; right: 6vw; bottom: 12vh; opacity: 0; transform: translateY(24px);
+          transition: opacity .5s ease, transform .5s ease; max-width: 38rem; }
+  .band.on { opacity: 1; transform: none; }
+  .band h2 { font-size: clamp(2rem, 5vw, 4rem); line-height: 1.05; }
+  .band p { color: var(--muted); margin-top: 1rem; }
+  #loading { position: fixed; inset: 0; display: grid; place-items: center; background: var(--bg); z-index: 9; transition: opacity .4s; }
+  #loading.done { opacity: 0; pointer-events: none; }
+  section.below { padding: 14vh 6vw; max-width: 60rem; }
+  /* Touch devices and reduced motion get the designed still instead of the scrub. */
+  @media (hover: none), (prefers-reduced-motion: reduce) {
+    #hero { height: 100vh; }
+    .stage video { display: none; } .poster { display: block; }
+    .band { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+<div id="loading" aria-live="polite">Loading</div>
+<main>
+  <section id="hero" aria-label="{{brand}}">
+    <div class="stage">
+      <img class="poster" src="assets/poster.jpg" alt="{{poster-alt}}">
+      <video id="scrub" muted playsinline preload="auto" aria-hidden="true"></video>
+      <!-- One .band per row of the band map. data-from / data-to are scroll fractions 0..1. -->
+      <div class="band" data-from="0" data-to="0.2"><h2>{{band-1-headline}}</h2><p>{{band-1-support}}</p></div>
+      <div class="band" data-from="0.85" data-to="1"><h2>{{cta-headline}}</h2><p><a href="{{cta-href}}">{{cta-label}}</a></p></div>
+    </div>
+  </section>
+  <section class="below"><!-- below-fold outline from the design package --></section>
+</main>
+<script src="scrub.js"></script>
+</body>
+</html>

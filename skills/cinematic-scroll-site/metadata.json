@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "October 2026",
+  "abstract": "End-to-end pipeline for cinematic scroll-driven websites: setup scan, tier choice, storyboard and design package, cost-gated AI image and video generation, ffmpeg encode, static build, adversarial verification with a copy gate, and publish. Delegates the scrub engine to scroll-video-site and media work to ffmpeg-skill.",
+  "references": [
+    "references/prompt-laws.md",
+    "references/design-package.md",
+    "references/ffmpeg-recipes.md"
+  ]
+}

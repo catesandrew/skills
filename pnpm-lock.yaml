@@ -48,6 +48,8 @@ importers:
 
   packages/skill-chrome-run-flow: {}
 
+  packages/skill-cinematic-scroll-site: {}
+
   packages/skill-commit-message: {}
 
   packages/skill-data-table-builder: {}

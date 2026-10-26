@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "cw",
-      "description": "56 skills, distributed via the cw plugin command prefix.",
+      "description": "57 skills, distributed via the cw plugin command prefix.",
       "source": "./",
       "strict": false,
       "skills": [
@@ -28,6 +28,7 @@
         "./skills/chrome-inspect-a11y",
         "./skills/chrome-inspect-element",
         "./skills/chrome-run-flow",
+        "./skills/cinematic-scroll-site",
         "./skills/commit-message",
         "./skills/data-table-builder",
         "./skills/design-critique-loop",

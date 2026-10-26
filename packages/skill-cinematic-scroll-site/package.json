@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-cinematic-scroll-site",
+  "version": "1.0.0",
+  "description": "End-to-end pipeline for cinematic scroll-driven websites: setup scan, tier choice, storyboard and design package, cost-gated AI image and video generation, ffmpeg encode, static build, adversarial…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}
