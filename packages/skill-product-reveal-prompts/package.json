@@ -1,0 +1,23 @@
+{
+  "name": "@catesworks/skill-product-reveal-prompts",
+  "version": "1.0.0",
+  "description": "Turns a single subject into copy-paste prompts for a start frame, a consistent end frame (exploded or burst style), and a start/end-frame video transition for Google Flow, Kling or similar, plus the…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "scripts/**",
+    "template/**",
+    "templates/**",
+    "remotion/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

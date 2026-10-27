@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "cw",
-      "description": "62 skills, distributed via the cw plugin command prefix.",
+      "description": "63 skills, distributed via the cw plugin command prefix.",
       "source": "./",
       "strict": false,
       "skills": [
@@ -54,6 +54,7 @@
         "./skills/pr-gh-code-review",
         "./skills/pr-gh-open",
         "./skills/procfile-manager",
+        "./skills/product-reveal-prompts",
         "./skills/react-component-patterns",
         "./skills/react-hooks-closures",
         "./skills/react-query-cache-determinism",
