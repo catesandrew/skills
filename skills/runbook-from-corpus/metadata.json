@@ -6,5 +6,6 @@
   "references": [
     "references/corpus-contract.md",
     "references/section-templates.md"
-  ]
+  ],
+  "category": "architecture-docs"
 }

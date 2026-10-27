@@ -18,5 +18,6 @@
     "template/snap-tilt.js",
     "template/snap-logic.js",
     "template/style.css"
-  ]
+  ],
+  "category": "motion-and-media"
 }

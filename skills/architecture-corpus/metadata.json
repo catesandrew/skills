@@ -10,5 +10,6 @@
     "references/per-repo-doc-template.md",
     "references/operations-surface-markers.md",
     "references/diagram-examples.md"
-  ]
+  ],
+  "category": "architecture-docs"
 }

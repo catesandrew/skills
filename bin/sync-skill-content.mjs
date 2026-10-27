@@ -11,7 +11,7 @@
 //   1. Prunes everything under packages/skill-<name>/ except package.json and
 //      CHANGELOG.md (closes the stale-orphan gap on a gitignored, un-diffable
 //      destination — a file removed from skills/<name>/ must not survive here).
-//   2. Copies SKILL.md, metadata.json, references/**, README.md, agents/** (if
+//   2. Copies SKILL.md, metadata.json, references/**, README.md, agents/**, scripts/**, template/**, templates/**, remotion/** (if
 //      present), and the root LICENSE (if it exists) — sourced from
 //      `git ls-files skills/<name>` (tracked files only, so untracked trees are
 //      excluded for free) and filtered through an explicit content whitelist, so
@@ -99,7 +99,11 @@ function isPackageContent(inSkillPath) {
     inSkillPath === 'metadata.json' ||
     inSkillPath === 'README.md' ||
     inSkillPath.startsWith('references/') ||
-    inSkillPath.startsWith('agents/')
+    inSkillPath.startsWith('agents/') ||
+    inSkillPath.startsWith('scripts/') ||
+    inSkillPath.startsWith('template/') ||
+    inSkillPath.startsWith('templates/') ||
+    inSkillPath.startsWith('remotion/')
   )
 }
 

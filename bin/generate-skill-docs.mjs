@@ -13,6 +13,7 @@
 
 import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
+import { CATEGORIES } from './lib/categories.mjs';
 
 // Resolved from process.cwd(), not this script's location — every real
 // invocation runs from the repo root; cwd-relative resolution also keeps
@@ -123,9 +124,9 @@ function truncateAbstract(text) {
   return `${cut.slice(0, lastSpace > 0 ? lastSpace : ABSTRACT_MAX_LEN)}…`;
 }
 
-/** Escapes markdown table-cell-breaking characters: pipes and hard line breaks. */
+/** Escapes markdown table-cell-breaking characters (pipes, hard line breaks) and `<`, which MDX would parse as a JSX tag. */
 function escapeCell(text) {
-  return text.replace(/\s+/g, ' ').trim().replace(/\|/g, '\\|');
+  return text.replace(/\s+/g, ' ').trim().replace(/\|/g, '\\|').replace(/</g, '&lt;');
 }
 
 function installCommand(skillName) {
@@ -139,8 +140,13 @@ function buildCatalog(skillNames) {
     const description = parseFrontmatterDescription(skillMd, name);
     const useCase = deriveUseCase(description, name);
     const abstract = truncateAbstract(metadata.abstract || '');
-    return { name, abstract, useCase, install: installCommand(name) };
+    return { name, category: metadata.category, abstract, useCase, install: installCommand(name) };
   });
+  const known = new Set(CATEGORIES.map((c) => c.slug));
+  const bad = rows.filter((r) => !known.has(r.category));
+  if (bad.length > 0) {
+    fail(`unknown or missing category in metadata.json for: ${bad.map((r) => r.name).join(', ')}`);
+  }
 
   const lines = [];
   lines.push('# Skill Catalog');
@@ -151,14 +157,20 @@ function buildCatalog(skillNames) {
   lines.push('');
   lines.push(`${rows.length} skills available.`);
   lines.push('');
-  lines.push('| Skill | What it\'s for | Use case | Install | Deep dive |');
-  lines.push('|---|---|---|---|---|');
-  for (const row of rows) {
-    const install = `\`${row.install}\``;
-    const deepDive = `[Read more](/docs/skills/${row.name})`;
-    lines.push(`| ${escapeCell(row.name)} | ${escapeCell(row.abstract)} | ${escapeCell(row.useCase)} | ${install} | ${deepDive} |`);
+  for (const { slug, title } of CATEGORIES) {
+    const inCategory = rows.filter((r) => r.category === slug);
+    if (inCategory.length === 0) continue;
+    lines.push(`## ${title}`);
+    lines.push('');
+    lines.push('| Skill | What it\'s for | Use case | Install | Deep dive |');
+    lines.push('|---|---|---|---|---|');
+    for (const row of inCategory) {
+      const install = `\`${row.install}\``;
+      const deepDive = `[Read more](/docs/skills/${row.name})`;
+      lines.push(`| ${escapeCell(row.name)} | ${escapeCell(row.abstract)} | ${escapeCell(row.useCase)} | ${install} | ${deepDive} |`);
+    }
+    lines.push('');
   }
-  lines.push('');
   return lines.join('\n');
 }
 
