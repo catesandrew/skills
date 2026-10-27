@@ -1,0 +1,23 @@
+{
+  "name": "@catesworks/skill-palette-scrub-story",
+  "version": "1.0.0",
+  "description": "Scroll-driven brand story with one scrubbed video per act over a continuous background colour ramp, a text colour that flips light to dark, and a scrim solved against the worst footage pixel so text…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "scripts/**",
+    "template/**",
+    "templates/**",
+    "remotion/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

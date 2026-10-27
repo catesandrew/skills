@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "cw",
-      "description": "63 skills, distributed via the cw plugin command prefix.",
+      "description": "64 skills, distributed via the cw plugin command prefix.",
       "source": "./",
       "strict": false,
       "skills": [
@@ -47,6 +47,7 @@
         "./skills/microservice-docs",
         "./skills/nextjs-react-query-cache-coordination",
         "./skills/nuqs-url-state",
+        "./skills/palette-scrub-story",
         "./skills/pinned-video-blob-scrub",
         "./skills/point-cloud-assembly-scene",
         "./skills/pr-ado-code-review",

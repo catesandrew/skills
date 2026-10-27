@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0D1A12">
+<title>Brand — From shade to daylight</title>
+<link rel="stylesheet" href="story.css">
+</head>
+<body>
+<a class="skip" href="#after">Skip the film</a>
+<main>
+  <!-- One <video> per act, same order as story.json acts. Copy the beat text from the user, not from this file. -->
+  <section class="story" id="story" aria-label="A story in six acts">
+    <div class="stage">
+      <div class="film-frame">
+        <video class="film active" muted playsinline preload="auto" aria-hidden="true"></video>
+        <video class="film" muted playsinline preload="auto" aria-hidden="true"></video>
+        <video class="film" muted playsinline preload="auto" aria-hidden="true"></video>
+        <video class="film" muted playsinline preload="auto" aria-hidden="true"></video>
+        <video class="film" muted playsinline preload="auto" aria-hidden="true"></video>
+        <video class="film" muted playsinline preload="auto" aria-hidden="true"></video>
+        <div class="film-shade"></div>
+      </div>
+      <div class="beat-layer">
+        <div class="beat" data-act="0"><h1>Act one line.</h1></div>
+        <div class="beat" data-act="1"><h2>Act two line.</h2></div>
+        <div class="beat" data-act="2"><h2>Act three line.</h2></div>
+        <div class="beat brand-beat" data-act="3"><h2>BRAND</h2></div>
+        <div class="beat" data-act="4"><h2>Act five line.</h2></div>
+        <div class="beat final-beat" data-act="5"><button class="button">Call to action</button><p>One line of reassurance.</p></div>
+      </div>
+      <div class="progress" aria-hidden="true"><div class="progress-fill"></div></div>
+    </div>
+  </section>
+  <div class="day-page" id="after">
+    <header class="header"><a href="#story" class="wordmark">BRAND</a></header>
+    <!-- Part 2: claim, proof blocks, ritual, origin, CTA, footer. Light palette only. -->
+  </div>
+</main>
+<script type="module">
+  import { init } from './scrub.js'
+  const { cfg } = await init('story.json')
+  // Point each <video> at its act: src + poster come from story.json so the HTML stays generic.
+  document.querySelectorAll('.film').forEach((v, i) => {
+    v.src = cfg.acts[i].video
+    v.poster = cfg.acts[i].poster
+  })
+</script>
+</body>
+</html>

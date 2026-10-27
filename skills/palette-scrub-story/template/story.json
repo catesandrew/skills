@@ -1,0 +1,15 @@
+{
+  "palette": ["0D1A12", "16281B", "1F4A28", "4A9B3F", "7FBF63", "C9DCA8", "F4F7F0"],
+  "knots": [0, 0.19, 0.335, 0.48, 0.62, 0.8, 1],
+  "text": { "light": "F4F7F0", "dark": "12200F", "crossAct": 4, "crossSpan": 0.75 },
+  "minContrast": 4.6,
+  "vhPerAct": { "desktop": 217, "mobile": 140 },
+  "acts": [
+    { "video": "assets/shade.mp4",    "poster": "assets/shade.jpg",    "label": "THE SHADE",    "beat": [0.25, 0.75] },
+    { "video": "assets/harvest.mp4",  "poster": "assets/harvest.jpg",  "label": "THE LEAF",     "beat": [0.25, 0.75] },
+    { "video": "assets/mill.mp4",     "poster": "assets/mill.jpg",     "label": "THE STONE",    "beat": [0.2, 0.6] },
+    { "video": "assets/whisk.mp4",    "poster": "assets/whisk.jpg",    "label": "THE NAME",     "beat": [0.5, 1] },
+    { "video": "assets/pour.mp4",     "poster": "assets/pour.jpg",     "label": "THE RITUAL",   "beat": [0.3, 0.8] },
+    { "video": "assets/daylight.mp4", "poster": "assets/daylight.jpg", "label": "THE DAYLIGHT", "beat": [0.5, 1] }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "October 2026",
+  "abstract": "Scroll-driven brand story with one scrubbed video per act over a continuous background colour ramp, a text colour that flips light to dark, and a scrim solved against the worst footage pixel so text stays readable. Adapts the prompt pack (reference image, six act scenes, shared suffix) to any product or service input. Vanilla JS template, offline contrast sweep and tests, built from measurements of a live demo.",
+  "references": [
+    "references/observed-koen.md",
+    "references/prompt-templates.md",
+    "scripts/assemble-prompts.mjs",
+    "scripts/assemble-prompts.test.mjs",
+    "scripts/palette.test.mjs",
+    "scripts/sweep-contrast.mjs",
+    "template/index.html",
+    "template/package.json",
+    "template/palette.js",
+    "template/scrub.js",
+    "template/story.css",
+    "template/story.json"
+  ],
+  "category": "motion-and-media"
+}
