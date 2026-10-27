@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "October 2026",
+  "abstract": "Five-act scroll story pipeline for Next.js: prompts the user for five plain-English act descriptions, rewrites them into cinematic shot prompts, generates five 5s clips with Higgsfield or Kling behind a cost gate, encodes one scrubbable video, builds the page, and optionally adds a Shopify storefront via Hydrogen.",
+  "references": [
+    "references/cinematic-vocabulary.md",
+    "references/shopify-hydrogen.md",
+    "scripts/act-at.test.mjs",
+    "template/FiveActScroll.tsx",
+    "template/act-at.js",
+    "template/story.json"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "video": "/media/story.mp4",
+  "acts": [
+    { "title": "Origin",  "caption": "FILL FROM USER COPY", "seconds": 5, "poster": "/media/poster-1.jpg" },
+    { "title": "Detail",  "caption": "FILL FROM USER COPY", "seconds": 5, "poster": "/media/poster-2.jpg" },
+    { "title": "Process", "caption": "FILL FROM USER COPY", "seconds": 5, "poster": "/media/poster-3.jpg" },
+    { "title": "Product", "caption": "FILL FROM USER COPY", "seconds": 5, "poster": "/media/poster-4.jpg" },
+    { "title": "Payoff",  "caption": "FILL FROM USER COPY", "seconds": 5, "poster": "/media/poster-5.jpg" }
+  ]
+}

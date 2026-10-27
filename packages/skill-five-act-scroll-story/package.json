@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-five-act-scroll-story",
+  "version": "1.0.0",
+  "description": "Five-act scroll story pipeline for Next.js: prompts the user for five plain-English act descriptions, rewrites them into cinematic shot prompts, generates five 5s clips with Higgsfield or Kling…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

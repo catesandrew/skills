@@ -90,6 +90,7 @@ pnpm --filter website start
 | `pinned-video-blob-scrub` | GSAP-pinned hero that scrubs a Blob-preloaded MP4 on scroll, with a timeout fallback to stills |
 | `lenis-section-snap-tilt` | Lenis one-section-per-wheel glide plus CSS 3D perspective tilt panels |
 | `css-fade-up-reveal` | Library-free CSS smooth scroll and IntersectionObserver fade-up reveal |
+| `five-act-scroll-story` | Five-act scroll story in Next.js — prompts for five act descriptions, rewrites them to cinematic shot prompts, generates 5s clips via Higgsfield or Kling, scrubs them by scroll, optional Shopify via Hydrogen |
 | `cinematic-scroll-site` | End-to-end cinematic scroll-site pipeline — tiered AI hero video, cost-gated generation, design package, ffmpeg encode, static build, copy gate, publish |
 | `high-ticket-site-generator` | Fill-in-the-blanks brief → single-file animated premium site (entrance, hero, ROI calculator) plus the conversion spine: proof, lead form, pricing, FAQ, booking |
 | `avatar-reel` | Script with [bracket] cues → HeyGen avatar → kinetic-caption 9:16 reel (Remotion + FFmpeg), local Whisper timestamps, approval gate |

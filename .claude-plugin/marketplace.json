@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "cw",
-      "description": "61 skills, distributed via the cw plugin command prefix.",
+      "description": "62 skills, distributed via the cw plugin command prefix.",
       "source": "./",
       "strict": false,
       "skills": [
@@ -35,6 +35,7 @@
         "./skills/design-critique-loop",
         "./skills/dithered-motif-site",
         "./skills/excel-like-table-navigation",
+        "./skills/five-act-scroll-story",
         "./skills/frontend-quality-loop",
         "./skills/frontend-scaffold",
         "./skills/generate-angular-storybook",
