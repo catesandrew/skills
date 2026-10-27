@@ -59,6 +59,15 @@ Write the answers into the design package so later phases do not re-ask.
   credits and the video costs roughly 10 to 55 credits depending on the model.
 - Models are chosen by ID in the tool call; list the connector's model
   catalog and preflight the top two or three for the same shot.
+- Render failures: a job can end `failed` or be flagged by moderation, and
+  abstract prompts (dissolving figures, floating pills) are the usual false
+  positives. Reword toward product or scene context and retry once; if it is
+  still flagged, try a more lenient model from the catalog, usually at a lower
+  resolution. Check the credit balance afterward instead of assuming a refund,
+  tell the user about every retry, and never report a clip as rendered when it
+  was not. If the connector suggests a style preset, decline it with the
+  `declined_preset_id` it names, because presets break palette and chaining
+  consistency.
 
 ## Kling notes
 

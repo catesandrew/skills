@@ -65,6 +65,19 @@ ffmpeg -i still.png -vf "scale='min(1920,iw)':-2" -q:v 3 assets/still-01.jpg
 ffmpeg -i still.png -vf "scale='min(1920,iw)':-2" -c:v libwebp -quality 80 assets/still-01.webp
 ```
 
+## Colorway variants without regenerating
+
+For product colorways, shift the hue of an approved still instead of paying
+for another generation. Check each result by eye, since saturated brand colors
+and skin tones can shift unnaturally.
+
+```sh
+ffmpeg -i still.png -vf "hue=h=120:s=1.15" still-green.png
+```
+
+`h` is the hue rotation in degrees and `s` scales saturation. Do not apply it
+to a clip that already carries a brand-defined color.
+
 ## Inspect the result
 
 `ffmpeg-skill`'s `look.py assets/hero.mp4 --tiles 3x2`, then view the PNG:

@@ -54,6 +54,8 @@ The generation phase needs an image and video provider (Higgsfield or Kling, cho
 - Every video segment, in a chain too, passes its own video gate; chained segments start from the previous segment's lossless last frame uploaded as an input image, not a regenerated one.
 - Decline the connector's style presets and auto-enhance; they break palette and chaining consistency.
 - Prices change: preflight and read them live, never quote from memory.
+- A failed or moderation-flagged render gets one reworded retry, then a more lenient model; check the balance instead of assuming a refund, and tell the user about every retry (`references/providers.md`).
+- Colorway variants of an approved still come from an `ffmpeg` hue shift, not another generation (`references/ffmpeg-recipes.md`).
 - Encode for scrubbing: no audio, short keyframe interval, `+faststart`; try `-g 1` only if a short GOP still stutters.
 - Keep raw generations, review clips, extracted frames, and the design package out of the deploy folder.
 - Copy from the design package ships verbatim; the copy gate must come back clean (no em dashes, none of the listed stock words) across the whole file, especially lower sections.
