@@ -66,6 +66,8 @@ importers:
 
   packages/skill-five-act-scroll-story: {}
 
+  packages/skill-frame-sequence-scrub-site: {}
+
   packages/skill-frontend-quality-loop: {}
 
   packages/skill-frontend-scaffold: {}

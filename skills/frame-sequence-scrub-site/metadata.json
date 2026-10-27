@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "October 2026",
+  "abstract": "Scroll-driven site where AI video clips become ffmpeg-extracted frames and scroll position picks which frame a canvas paints: frame budget, extraction script, preloader, lerped canvas engine, reverse-playback chapters, and poster and looped-video fallbacks. Delegates generation, design package, copy gate and publishing to cinematic-scroll-site.",
+  "references": [
+    "references/frame-budget.md"
+  ],
+  "category": "motion-and-media"
+}

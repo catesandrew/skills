@@ -5,13 +5,17 @@ their scroll wheel, so every frame must be a good frame and the motion must
 read at any speed. These laws exist to keep generations scrubbable. Read
 before writing any generation prompt.
 
-## The twelve laws
+## The thirteen laws
 
 1. **One continuous camera move.** A single push-in, pull-back, orbit, rise,
    or track. No cuts, no scene changes, no whip pans.
 2. **One direction.** Scrubbing backward must look as intentional as forward.
    Avoid motion that only makes sense one way (pouring, falling debris,
    anything with an obvious cause then effect) unless that is the point.
+   Motion that does read both ways is an asset: a transformation clip (parts
+   exploding outward, a bloom opening) scrubbed backward is its own reverse
+   chapter at no extra generation cost. Generate it once and design both
+   directions on purpose.
 3. **A designed first frame and final frame.** Frame one is the hero's resting
    state (and the phone poster). The final frame is the resting state at the
    page bottom and must hold a CTA comfortably.
@@ -35,6 +39,12 @@ before writing any generation prompt.
     drift; chain segments instead.
 12. **Brand-world consistent.** Every frame should look like it belongs to the
     palette and type chosen in the design package.
+13. **One anchor image per site.** When a site has several clips, generate one
+    approved anchor image and pass it as the image reference on every clip so
+    the product keeps its shape, materials and lighting across segments.
+    Chaining from the previous last frame (see the chaining recipe) is the
+    alternative when the clips must continue each other rather than share a
+    subject.
 
 ## Prompt templates
 

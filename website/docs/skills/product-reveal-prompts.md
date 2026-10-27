@@ -24,7 +24,9 @@ It then outputs four prompts with every blank filled in:
 - **C, video transition:** a smooth transition from A to B, with wrappers for Google Flow ("frames to video"), Kling (start and end frame), and tools without end-frame support.
 - **D, website prompt:** the scrollytelling prompt with the brand, object, frame count, and real copy for four beats.
 
-A reliability checklist follows: reject a cropped start frame, check that A and B match in position and scale, use a start-and-end-frame video tool at the highest tier, then cut to roughly 25 to 30 fps WebP frames in `/public/sequence/`.
+A table of seven impossible moments follows the prompts (explosion, fly-through, molten birth, frozen time, bloom, descent, light reveal), for subjects where `exploded` or `burst` is not the right transformation.
+
+A reliability checklist also follows: reject a cropped start frame, check that A and B match in position and scale, use a start-and-end-frame video tool at the highest tier, then cut to roughly 25 to 30 fps WebP frames in `/public/sequence/`.
 
 ## How To Use It
 
@@ -59,6 +61,7 @@ Inputs: `subject` (required) and `site_prompt_path`, the path to the website pro
 - [five-act-scroll-story](/docs/skills/five-act-scroll-story): a five-clip, Next.js scroll story with generation behind a cost gate.
 - [cinematic-scroll-site](/docs/skills/cinematic-scroll-site): the end-to-end pipeline that generates and encodes the hero video.
 - [scroll-video-site](/docs/skills/scroll-video-site): the scroll-scrub engine for a video-driven landing page.
+- [frame-sequence-scrub-site](/docs/skills/frame-sequence-scrub-site): the canvas frame-scrub build for plain HTML, with a frame budget and extraction script.
 
 ---
 

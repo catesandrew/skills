@@ -1,6 +1,6 @@
 ---
 name: product-reveal-prompts
-description: Use when the user gives a subject/product (e.g. "electric bike", "matcha drink") and wants a scroll-animated website built from an AI-generated start frame, end frame and transition video. Turns the subject alone into tool-agnostic prompts - start image, end image, video transition - and the final website prompt. Triggers on "start and end frame", "reveal animation", "scrollytelling product site", "exploded product shot".
+description: Use when the user gives a subject/product (e.g. "electric bike", "matcha drink") and wants a scroll-animated website built from an AI-generated start frame, end frame and transition video. Turns the subject alone into tool-agnostic prompts - start image, end image, video transition - and the final website prompt. Triggers on "start and end frame", "reveal animation", "scrollytelling product site", "exploded product shot", "impossible moment" scroll concepts.
 ---
 
 # product-reveal-prompts
@@ -37,7 +37,22 @@ Input: a subject only. Output: copy-paste prompts for ANY image/video tool (Gemi
 2. Generate B with A as reference; reject if framing/angle/colors drifted or the product is unrecognizable. Retry with "keep the product exactly as in the reference".
 3. Compare A and B side by side: same position and scale or the video will jump.
 4. Video tool needs start AND end frame support (Google Flow "frames to video", Kling start/end frame). Use the highest quality tier, download upscaled.
-5. Cut to frames (ffmpeg or ezgif), ~25-30 fps, trim dead seconds, WebP into /public/sequence/, then run prompt D.
+5. Cut to frames (ffmpeg or ezgif), ~25-30 fps, trim dead seconds, WebP into /public/sequence/, then run prompt D. For a plain-HTML canvas build with a frame budget, extraction script and fallbacks, use `frame-sequence-scrub-site` instead.
+
+## 4. Other impossible moments
+`exploded` and `burst` are two of seven. When the subject suits a different transformation, keep the same start-frame-then-reference-image method and swap the moment. Formula: one subject plus one impossible moment; change the subject, never the system.
+
+| Moment | The transformation clip | Suits |
+|---|---|---|
+| Explosion | The product disassembles into floating parts and holds exploded. Scrubbed backward it is the reassembly. | Mechanical, multi-part (`exploded`) |
+| Fly-through | One continuous dolly through a dark space that passes the exhibits, each caught in its own light. | Portfolio, gallery, architecture |
+| Molten birth | A glowing stream coils into the finished object and cools from white heat to its final finish. | Jewelry, metalwork, craft |
+| Frozen time | The liquid or splash is frozen while the camera orbits it; one clip lets time release for a breath, then refreezes. | Drinks, spirits, spills |
+| Bloom | Growth under the scroll: a bud opens petal by petal, then the product appears from its heart. | Skincare, botanical, beauty |
+| Descent | The subject sinks through depth; the page background and light darken in sync with progress. | Watches, dive gear, anything "rated for the dark" |
+| Light reveal | Everything starts in darkness and a single beam reveals the object section by section. | Instruments, lacquer, luxury objects |
+
+Pick the moment whose motion reads in both directions. One start frame, one transformation clip and one macro clip are enough; `frame-sequence-scrub-site` turns those clips into a canvas frame-scrub site, and the transformation clip played backward is a free reverse chapter.
 
 ## Inputs
 | Param | Description | Default |

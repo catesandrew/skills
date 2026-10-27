@@ -92,6 +92,7 @@ pnpm --filter website start
 | `css-fade-up-reveal` | Library-free CSS smooth scroll and IntersectionObserver fade-up reveal |
 | `five-act-scroll-story` | Five-act scroll story in Next.js — prompts for five act descriptions, rewrites them to cinematic shot prompts, generates 5s clips via Higgsfield or Kling, scrubs them by scroll, optional Shopify via Hydrogen |
 | `cinematic-scroll-site` | End-to-end cinematic scroll-site pipeline — tiered AI hero video, cost-gated generation, design package, ffmpeg encode, static build, copy gate, publish |
+| `frame-sequence-scrub-site` | Scroll site where AI video clips become extracted frames painted on a canvas by scroll — frame budget, ffmpeg extraction script, preloader, lerped engine, reverse-playback chapters, poster and looped-video fallbacks |
 | `palette-scrub-story` | One scrubbed video per act over a continuous scroll-driven background colour ramp, with a solved scrim and text flip so copy stays readable; vanilla-JS template, contrast sweep and tests |
 | `product-reveal-prompts` | Turns a subject into tool-agnostic start-frame, end-frame and video-transition prompts (Gemini, Kling, Google Flow, Higgsfield) plus the scrollytelling website prompt |
 | `before-after-hero-video` | Animated site hero from a before/after reveal: start frame, matching end frame (Higgsfield GPT Image 2), start/end-frame video (Seedance), scroll-scrubbed; roofing example and settings |

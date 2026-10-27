@@ -57,6 +57,22 @@ Approved by user: {yes, date}
 | ... | | | | |
 The last band holds the CTA on the final frame.
 
+### 7b. Callouts and state-synced UI
+Callouts are small labels pinned to something in the footage; synced UI is any
+element whose state is driven by scroll progress. Both are tied to the same
+progress value as the bands, so list them against the same ranges.
+
+| Item | Scroll range | Anchored to (what in the frame) | Copy or value (verbatim) | Style |
+|---|---|---|---|---|
+| Callout 1 | 20-35% | the prism near centre | PRISM: full spectrum | hairline leader line in the accent colour |
+| Meter | 0-100% | corner | counts 0 to 3,000 M | mono, live |
+| Background | 0-100% | whole page | #0E3A5C to #000000 | interpolated with progress |
+
+Rules: a callout fades in only while its component is on screen and the leader
+line points at it at the worst frame; synced values read from the scrubbed
+progress, never a timer; each state item states its reduced-motion and phone
+fallback (static final value, or hidden) so the poster layout stays honest.
+
 ## 8. Below-fold outline
 Ordered sections with verbatim copy: proof, how it works, offerings, FAQ,
 testimonials, CTA, form microcopy, footer.
@@ -68,6 +84,7 @@ Which overlays, lines, icons, or SVG details, and which bands they belong to.
 - [ ] Copy matches this file verbatim
 - [ ] Copy gate: no em dashes, no stock words
 - [ ] Flick test passed against the band map
+- [ ] Callouts land on their anchors; state-synced UI follows progress and has a fallback
 - [ ] Worst-frame legibility audited per band
 - [ ] Mobile decision implemented
 ```

@@ -1,0 +1,56 @@
+<!doctype html>
+<!-- Starter for frame-sequence-scrub-site. Replace every {{placeholder}} from the design package; copy ships verbatim. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:image" content="{{live-url}}/assets/poster.jpg">
+<meta property="og:url" content="{{live-url}}">
+<style>
+  :root { --bg:#0e0d0c; --text:#f3efe8; --muted:#a39d93; --accent:#d9a441; } /* replace with palette tokens; never pure black or white */
+  * { box-sizing: border-box; margin: 0; }
+  html { background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; }
+  .chapter { height: 400vh; position: relative; } /* scroll length of the chapter; tune with the flick test */
+  .stage { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+  .stage canvas, .stage .poster, .stage .loop { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .stage .poster, .stage .loop { display: none; object-fit: cover; }
+  .band { position: absolute; left: 6vw; right: 6vw; bottom: 12vh; opacity: 0; transform: translateY(24px);
+          transition: opacity .5s ease, transform .5s ease; max-width: 38rem; }
+  .band.on { opacity: 1; transform: none; }
+  .band h2 { font-size: clamp(2rem, 5vw, 4rem); line-height: 1.05; }
+  .band p { color: var(--muted); margin-top: 1rem; }
+  #loading { position: fixed; inset: 0; display: grid; place-items: center; background: var(--bg); z-index: 9; transition: opacity .4s; }
+  #loading.done { opacity: 0; pointer-events: none; }
+  #loading-bar { position: absolute; left: 0; top: 0; height: 2px; width: 100%; background: var(--accent); transform: scaleX(0); transform-origin: left; }
+  section.below { padding: 14vh 6vw; max-width: 60rem; }
+  /* scrub.js adds .still (reduced motion: designed poster) or .video (narrow screen: looped MP4) to <html>. */
+  .still .chapter, .video .chapter { height: 100vh; }
+  .still canvas, .video canvas { display: none; }
+  .still .poster { display: block; }
+  .video .loop { display: block; }
+  .still .band, .video .band { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+<div id="loading" aria-live="polite">Loading<div id="loading-bar"></div></div>
+<main>
+  <!-- One .chapter per clip. data-frames uses {n} for the 1-based padded frame number (extract-frames.mjs output). -->
+  <section class="chapter" aria-label="{{brand}}" data-frames="assets/frames/{{clip-a}}/frame_{n}.jpg" data-count="150">
+    <div class="stage">
+      <canvas aria-hidden="true"></canvas>
+      <img class="poster" src="assets/poster.jpg" alt="{{poster-alt}}">
+      <video class="loop" src="assets/{{clip-a}}.mp4" muted loop playsinline autoplay aria-hidden="true"></video>
+      <!-- One .band per row of the band map. data-from / data-to are scroll fractions 0..1 within this chapter. -->
+      <div class="band" data-from="0" data-to="0.25"><h2>{{band-1-headline}}</h2><p>{{band-1-support}}</p></div>
+    </div>
+  </section>
+  <!-- Add data-reverse="true" on a second chapter that reuses the same frames to play a transformation backwards. -->
+  <section class="below"><!-- below-fold outline from the design package --></section>
+</main>
+<script src="scrub.js"></script>
+</body>
+</html>

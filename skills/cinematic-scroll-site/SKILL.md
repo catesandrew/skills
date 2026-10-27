@@ -27,6 +27,7 @@ without a gate. The bar: it should look like it cost thousands of dollars.
 |---|---|
 | Scrub engine (damped playhead, seek coalescing, Lenis + GSAP, iOS quirks) | `scroll-video-site` and its `references/scroll-video-engine.*` |
 | Any video or image encode, concat, frame extract, contact sheet, platform check | `ffmpeg-skill` (probe, `look.py`, `check.py`); the few commands this pipeline needs are in `references/ffmpeg-recipes.md` |
+| Frames instead of video: clips extracted to JPEG or WebP and painted on a canvas by scroll (explode and reverse, several short clips) | `frame-sequence-scrub-site` |
 | GSAP-only pages (Webflow, plain HTML) with a pinned, Blob-preloaded scrub and a stills fallback | `pinned-video-blob-scrub` |
 | One-section-per-wheel glide and 3D tilt panels | `lenis-section-snap-tilt` |
 | Lightest scroll polish (smooth scroll, fade-up reveals, no library) | `css-fade-up-reveal` |

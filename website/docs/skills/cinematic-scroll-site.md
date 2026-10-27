@@ -19,7 +19,9 @@ Three tiers set scope and cost. Tier 1 is one hero (about 6 to 8 seconds of scro
 
 Money is gated at every step. The starting frame is preflighted for free and priced aloud first, the video model is chosen only after the frame is approved (the same shot preflighted on the top two or three models, with real prices and the remaining balance), and every video segment passes a watch-it-yourself gate from a review folder outside the deploy folder before the next credit moves.
 
-The design package (`references/design-package.md`) is the single deliverable of the design loop and the only input to the build: brand premise, palette tokens, type trio, signature element, band map of scroll ranges to copy, every line of copy, below-fold outline, and vector layer plan. Copy ships verbatim.
+The design package (`references/design-package.md`) is the single deliverable of the design loop and the only input to the build: brand premise, palette tokens, type trio, signature element, band map of scroll ranges to copy, a callouts and state-synced UI table (leader-line labels, meters, and backgrounds tied to scroll progress), every line of copy, below-fold outline, and vector layer plan. Copy ships verbatim.
+
+The prompt laws (`references/prompt-laws.md`) now include two rules from the frame-sequence approach: a transformation clip that reads in both directions is reusable as a reverse chapter, and a multi-clip site uses one approved anchor image as the reference for every clip.
 
 Bundled tooling mirrors the pipeline: `scripts/setup.sh` for the tool scan, `scripts/encode.mjs` for hero, poster, last-frame, and concat encodes, `scripts/copy-gate.mjs` for the em-dash and stock-word check, and a `template/` with a vanilla-JS scrub engine, loading ring, band map, and a poster layout for touch devices and reduced motion. Probing, frame inspection, and delivery checks are delegated to the `ffmpeg-skill` companion; the scrub engine's deeper gotchas live in `scroll-video-site`.
 
@@ -40,7 +42,7 @@ npm install @catesworks/skill-cinematic-scroll-site
 /plugin install cw@skills
 ```
 
-This last one installs all 60 skills as a single bundled plugin named `cw`; there is no standalone per-skill plugin.
+This last one installs every skill in the repo as a single bundled plugin named `cw`; there is no standalone per-skill plugin.
 
 The generation phase needs an image and video provider (Higgsfield or Kling, chosen with the user; see `references/providers.md`) and `ffmpeg`. Self-checks for the bundled scripts: `node --test scripts/copy-gate.test.mjs scripts/encode.test.mjs`.
 
@@ -62,6 +64,7 @@ The generation phase needs an image and video provider (Higgsfield or Kling, cho
 ## Related Skills
 
 - [scroll-video-site](/docs/skills/scroll-video-site): the scrub engine this pipeline builds on (damped playhead, seek coalescing, Lenis and GSAP wiring, iOS quirks).
+- [frame-sequence-scrub-site](/docs/skills/frame-sequence-scrub-site): the canvas frame-scrub variant, for clips extracted to frames instead of a scrubbed video.
 - [dithered-motif-site](/docs/skills/dithered-motif-site): another generative-frontend pipeline using produced media as the page centerpiece.
 - [five-act-scroll-story](/docs/skills/five-act-scroll-story): a narrower Next.js variant with exactly five user-described acts and an optional Shopify path.
 - [point-cloud-assembly-scene](/docs/skills/point-cloud-assembly-scene): a related generative-frontend motif technique.
