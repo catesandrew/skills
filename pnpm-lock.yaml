@@ -26,6 +26,8 @@ importers:
 
   packages/skill-avatar-reel: {}
 
+  packages/skill-before-after-hero-video: {}
+
   packages/skill-chrome-audit-bundles: {}
 
   packages/skill-chrome-audit-console: {}
@@ -78,6 +80,8 @@ importers:
 
   packages/skill-jira-estimate: {}
 
+  packages/skill-lead-research-assistant: {}
+
   packages/skill-lenis-section-snap-tilt: {}
 
   packages/skill-microservice-docs: {}
@@ -85,6 +89,8 @@ importers:
   packages/skill-nextjs-react-query-cache-coordination: {}
 
   packages/skill-nuqs-url-state: {}
+
+  packages/skill-palette-scrub-story: {}
 
   packages/skill-pinned-video-blob-scrub: {}
 

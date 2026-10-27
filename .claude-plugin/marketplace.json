@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "cw",
-      "description": "65 skills, distributed via the cw plugin command prefix.",
+      "description": "66 skills, distributed via the cw plugin command prefix.",
       "source": "./",
       "strict": false,
       "skills": [
@@ -44,6 +44,7 @@
         "./skills/graph-react-render-tree",
         "./skills/high-ticket-site-generator",
         "./skills/jira-estimate",
+        "./skills/lead-research-assistant",
         "./skills/lenis-section-snap-tilt",
         "./skills/microservice-docs",
         "./skills/nextjs-react-query-cache-coordination",

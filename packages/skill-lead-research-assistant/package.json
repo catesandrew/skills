@@ -1,0 +1,23 @@
+{
+  "name": "@catesworks/skill-lead-research-assistant",
+  "version": "1.0.0",
+  "description": "Finds and scores sales leads, target accounts or partnership prospects for a product: reads the repo or a description, fixes an ideal customer profile, searches for need signals, ranks companies 1-10…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "scripts/**",
+    "template/**",
+    "templates/**",
+    "remotion/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

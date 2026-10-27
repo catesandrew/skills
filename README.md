@@ -132,6 +132,12 @@ pnpm --filter website start
 | `architecture-corpus` | Build an evidence-cited architecture documentation corpus across sibling repos, including embedded pnpm/turbo/Nx/Cargo/Go workspaces |
 | `runbook-from-corpus` | Generate a symptom-first incident runbook strictly grounded in an existing architecture corpus |
 
+### Sales & business research
+
+| Skill | Description |
+|-------|-------------|
+| `lead-research-assistant` | Find and score sales leads or partnership prospects — ICP, need signals from web search, 1-10 fit scores, decision-maker role and outreach strategy per company |
+
 ## Scope
 
 This repo is **public**, so skills stay in it only if they're generic and
