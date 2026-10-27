@@ -5,7 +5,7 @@ their scroll wheel, so every frame must be a good frame and the motion must
 read at any speed. These laws exist to keep generations scrubbable. Read
 before writing any generation prompt.
 
-## The thirteen laws
+## The fifteen laws
 
 1. **One continuous camera move.** A single push-in, pull-back, orbit, rise,
    or track. No cuts, no scene changes, no whip pans.
@@ -45,6 +45,17 @@ before writing any generation prompt.
     Chaining from the previous last frame (see the chaining recipe) is the
     alternative when the clips must continue each other rather than share a
     subject.
+14. **A person needs an identity reference.** When a real person is the hero
+    (a portfolio, a founder, a coach), upload a well-lit, front-facing photo
+    and pass it as the identity reference on every generation, and name one
+    fixed wardrobe in every prompt. Generate two or three takes of any orbit
+    or turn and keep the one where the likeness holds through the whole
+    rotation; the quality of the input photo decides the result. Get the
+    person's consent before using their likeness.
+15. **Spend rerolls on the hero.** The hero scrub carries most of the impact.
+    Budget two or three takes for the hero clip and accept the first usable
+    take for every other clip, so extra credits go where visitors look first.
+    Say the planned take count in the price preview at the video gate.
 
 ## Prompt templates
 

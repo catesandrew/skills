@@ -21,7 +21,7 @@ Money is gated at every step. The starting frame is preflighted for free and pri
 
 The design package (`references/design-package.md`) is the single deliverable of the design loop and the only input to the build: brand premise, palette tokens, type trio, signature element, band map of scroll ranges to copy, a callouts and state-synced UI table (leader-line labels, meters, and backgrounds tied to scroll progress), every line of copy, below-fold outline, and vector layer plan. Copy ships verbatim.
 
-The prompt laws (`references/prompt-laws.md`) now include two rules from the frame-sequence approach: a transformation clip that reads in both directions is reusable as a reverse chapter, and a multi-clip site uses one approved anchor image as the reference for every clip.
+The prompt laws (`references/prompt-laws.md`) include four rules added from the frame-sequence and portfolio-style builds: a transformation clip that reads in both directions is reusable as a reverse chapter, a multi-clip site uses one approved anchor image as the reference for every clip, a real person as the hero needs an identity reference photo and a fixed wardrobe, and rerolls are spent on the hero clip first.
 
 Bundled tooling mirrors the pipeline: `scripts/setup.sh` for the tool scan, `scripts/encode.mjs` for hero, poster, last-frame, and concat encodes, `scripts/copy-gate.mjs` for the em-dash and stock-word check, and a `template/` with a vanilla-JS scrub engine, loading ring, band map, and a poster layout for touch devices and reduced motion. Probing, frame inspection, and delivery checks are delegated to the `ffmpeg-skill` companion; the scrub engine's deeper gotchas live in `scroll-video-site`.
 
