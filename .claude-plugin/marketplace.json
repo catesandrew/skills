@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "cw",
-      "description": "60 skills, distributed via the cw plugin command prefix.",
+      "description": "61 skills, distributed via the cw plugin command prefix.",
       "source": "./",
       "strict": false,
       "skills": [
@@ -40,6 +40,7 @@
         "./skills/generate-angular-storybook",
         "./skills/graph-react-deps",
         "./skills/graph-react-render-tree",
+        "./skills/high-ticket-site-generator",
         "./skills/jira-estimate",
         "./skills/lenis-section-snap-tilt",
         "./skills/microservice-docs",

@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-high-ticket-site-generator",
+  "version": "1.0.0",
+  "description": "Generates a premium single-file HTML marketing site for any niche from a fill-in brief (brand, niche, vibe, palette, headline, calculator input), covering the cinematic entrance, hero, interactive…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

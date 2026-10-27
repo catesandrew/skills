@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "October 2026",
+  "abstract": "Generates a premium single-file HTML marketing site for any niche from a fill-in brief (brand, niche, vibe, palette, headline, calculator input), covering the cinematic entrance, hero, interactive calculator, mobile rules, and the conversion section spine (proof, lead magnet, pricing, FAQ, booking) learned from a live reference site.",
+  "references": ["references/prompt-template.md", "references/reference-site-analysis.md"]
+}
