@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "October 2026",
+  "abstract": "Animated website hero from a before/after reveal: a start frame and a matching end frame generated from it (Higgsfield, GPT Image 2), animated into a short start/end-frame video (Seedance), then scrubbed as the hero. Includes the working settings, prompts and the roofing example.",
+  "references": [],
+  "category": "motion-and-media"
+}

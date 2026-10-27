@@ -1,0 +1,23 @@
+{
+  "name": "@catesworks/skill-before-after-hero-video",
+  "version": "1.0.0",
+  "description": "Animated website hero from a before/after reveal: a start frame and a matching end frame generated from it (Higgsfield, GPT Image 2), animated into a short start/end-frame video (Seedance), then…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "scripts/**",
+    "template/**",
+    "templates/**",
+    "remotion/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

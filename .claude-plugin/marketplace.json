@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "cw",
-      "description": "64 skills, distributed via the cw plugin command prefix.",
+      "description": "65 skills, distributed via the cw plugin command prefix.",
       "source": "./",
       "strict": false,
       "skills": [
@@ -17,6 +17,7 @@
         "./skills/audit-a11y-code",
         "./skills/audit-react-component",
         "./skills/avatar-reel",
+        "./skills/before-after-hero-video",
         "./skills/chrome-audit-bundles",
         "./skills/chrome-audit-console",
         "./skills/chrome-audit-css",
