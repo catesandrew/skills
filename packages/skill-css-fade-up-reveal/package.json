@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-css-fade-up-reveal",
+  "version": "1.0.0",
+  "description": "Library-free scroll polish: CSS smooth scrolling plus an IntersectionObserver reveal (fade-up, fade, slide, scale, staggered) with a .js gate, reduced-motion, no-IO and print handling, a native…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

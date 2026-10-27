@@ -52,6 +52,8 @@ importers:
 
   packages/skill-commit-message: {}
 
+  packages/skill-css-fade-up-reveal: {}
+
   packages/skill-data-table-builder: {}
 
   packages/skill-design-critique-loop: {}
@@ -72,11 +74,15 @@ importers:
 
   packages/skill-jira-estimate: {}
 
+  packages/skill-lenis-section-snap-tilt: {}
+
   packages/skill-microservice-docs: {}
 
   packages/skill-nextjs-react-query-cache-coordination: {}
 
   packages/skill-nuqs-url-state: {}
+
+  packages/skill-pinned-video-blob-scrub: {}
 
   packages/skill-point-cloud-assembly-scene: {}
 

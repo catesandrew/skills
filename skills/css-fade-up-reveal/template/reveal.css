@@ -1,0 +1,35 @@
+/* reveal.css - hide-then-reveal on scroll. Requires <html class="js"> (set by an inline head script). */
+
+html { scroll-behavior: smooth; }
+
+html.js [data-reveal] {
+  --reveal-duration: 700ms;
+  --reveal-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --reveal-x: 0px;
+  --reveal-y: 24px;
+  --reveal-scale: 1;
+  opacity: 0;
+  transform: translate3d(var(--reveal-x), var(--reveal-y), 0) scale(var(--reveal-scale));
+  transition:
+    opacity var(--reveal-duration) var(--reveal-ease),
+    transform var(--reveal-duration) var(--reveal-ease);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+/* Variants: only the starting offset changes. "up" is the default. */
+html.js [data-reveal="down"]  { --reveal-y: -24px; }
+html.js [data-reveal="left"]  { --reveal-y: 0px; --reveal-x: -32px; }
+html.js [data-reveal="right"] { --reveal-y: 0px; --reveal-x: 32px; }
+html.js [data-reveal="fade"]  { --reveal-y: 0px; }
+html.js [data-reveal="scale"] { --reveal-y: 0px; --reveal-scale: 0.94; }
+
+html.js [data-reveal].is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  html.js [data-reveal] { opacity: 1; transform: none; transition: none; }
+}
+
+@media print {
+  html.js [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+}

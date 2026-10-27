@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>reveal demo</title>
+<!-- Gate: add .js before first paint so CSS only hides content when JS can reveal it. -->
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="reveal.css">
+<style>
+  body { font: 18px/1.5 system-ui, sans-serif; margin: 0; }
+  section { min-height: 90vh; padding: 8vh 6vw; }
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .card { background: #eef; padding: 1.5rem; border-radius: 12px; }
+  #hud { position: fixed; top: 8px; right: 8px; background: #000c; color: #fff; padding: 6px 10px; font: 12px monospace; border-radius: 6px; z-index: 9; }
+</style>
+</head>
+<body>
+<div id="hud">visible: <span id="count">0</span></div>
+<section><h1 data-reveal>Fade up (default)</h1><p data-reveal data-reveal-delay="150">Delayed 150ms.</p></section>
+<section>
+  <h2 data-reveal="fade">Fade only</h2>
+  <div class="row" data-reveal-stagger="100">
+    <div class="card" data-reveal="left">Left</div>
+    <div class="card" data-reveal="scale">Scale</div>
+    <div class="card" data-reveal="right">Right</div>
+  </div>
+</section>
+<section><h2 data-reveal="down">Fade down</h2><button id="add" type="button">Insert late node</button><div id="slot"></div></section>
+<section><p data-reveal id="last">Last block.</p></section>
+<script src="reveal.js"></script>
+<script>
+  Reveal.init()
+  var count = document.getElementById('count')
+  new MutationObserver(function () { count.textContent = document.querySelectorAll('.is-visible').length })
+    .observe(document.body, { attributes: true, subtree: true, attributeFilter: ['class'] })
+  document.getElementById('add').addEventListener('click', function () {
+    var p = document.createElement('p'); p.id = 'late'; p.setAttribute('data-reveal', ''); p.textContent = 'Inserted after load.'
+    document.getElementById('slot').appendChild(p)
+  })
+</script>
+</body>
+</html>

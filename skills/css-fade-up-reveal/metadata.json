@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "October 2026",
+  "abstract": "Library-free scroll polish: CSS smooth scrolling plus an IntersectionObserver reveal (fade-up, fade, slide, scale, staggered) with a .js gate, reduced-motion, no-IO and print handling, a native animation-timeline view() variant, an Elementor fadeInUp mapping, a runnable template, and a DevTools probe for measuring a real page's reveal timings. Original timing values were not measured and are labeled as such.",
+  "references": [
+    "references/recipe-variants.md",
+    "references/accessibility-and-fallbacks.md",
+    "references/tuning-and-performance.md",
+    "references/verification.md",
+    "template/reveal.css",
+    "template/reveal.js",
+    "template/demo.html",
+    "scripts/probe-reveals.js",
+    "scripts/reveal.test.mjs"
+  ]
+}

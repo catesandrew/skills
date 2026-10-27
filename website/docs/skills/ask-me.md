@@ -40,7 +40,7 @@ npm install @catesworks/skill-ask-me
 /plugin install cw@skills
 ```
 
-This last one installs all 57 skills as a single bundled plugin named `cw`; there is no standalone per-skill plugin.
+This last one installs all 60 skills as a single bundled plugin named `cw`; there is no standalone per-skill plugin.
 
 ## Gotchas & Invariants
 

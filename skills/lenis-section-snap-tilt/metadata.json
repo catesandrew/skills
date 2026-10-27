@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "October 2026",
+  "abstract": "One-section-per-gesture scroll engine on Lenis (wheel with trackpad-flick debounce, touch, keyboard, hash, resize, tall sections, inner scrollers) plus scroll-driven CSS 3D tilt panels and fade-up reveals. Includes a no-build demo, unit-tested pure logic, DevTools samplers, an easing fitter, and a strict Measured / Derived / Unverified split: the reference page's tilt driver and WebGL canvas were not identified.",
+  "references": [
+    "references/snap-engine.md",
+    "references/tilt-3d.md",
+    "references/easing-and-timing.md",
+    "references/accessibility.md",
+    "references/measurement.md",
+    "scripts/wheel-sampler.js",
+    "scripts/matrix-sampler.js",
+    "scripts/fit-easing.mjs",
+    "scripts/snap-logic.test.mjs",
+    "scripts/tools.test.mjs",
+    "template/index.html",
+    "template/snap-tilt.js",
+    "template/snap-logic.js",
+    "template/style.css"
+  ]
+}

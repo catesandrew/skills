@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #0b0b0f; color: #eee; }
+.intro, .outro { min-height: 80vh; display: grid; place-content: center; text-align: center; padding: 2rem; }
+
+/* Tall track: its height is the scroll length. The stage is pinned inside it (pinSpacing:false). */
+.hero { height: 400vh; position: relative; }
+.stage { height: 100vh; width: 100%; display: grid; place-items: center; overflow: hidden; }
+.media { position: relative; width: 100%; height: 100%; overflow: hidden; transform-origin: 50% 50%; background: #000; }
+.media > img, .media > video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.media > video[hidden] { display: none; }
+.is-hidden { opacity: 0; transition: opacity .3s; }
+
+/* Reduced motion / no playable source: one designed still, normal flow, no pin. */
+.hero.is-static { height: auto; }
+.hero.is-static .stage { height: 70vh; }
+.hero.is-static [data-still="2"] { display: none; }
+
+/* Loading ring: --p is 0..1 and is set from JS while the Blob streams in. */
+.loader { position: absolute; inset: 0; margin: auto; width: 64px; height: 64px; }
+.loader[hidden] { display: none; }
+.loader svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.loader circle { fill: none; stroke-width: 3; }
+.loader .track { stroke: rgba(255,255,255,.2); }
+.loader .bar { stroke: #fff; stroke-dasharray: 113.1; stroke-dashoffset: calc(113.1 * (1 - var(--p, 0))); stroke-linecap: round; }
+.loader.indeterminate svg { animation: spin 1s linear infinite; }
+.loader.indeterminate .bar { stroke-dashoffset: 85; }
+@keyframes spin { to { transform: rotate(270deg); } }
+@media (prefers-reduced-motion: reduce) { .loader.indeterminate svg { animation: none; } }

@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-pinned-video-blob-scrub",
+  "version": "1.0.0",
+  "description": "Pinned GSAP ScrollTrigger hero that scrubs one Blob-preloaded MP4 through a lerped, seek-coalesced rAF loop, with streaming load progress, a ready-gate timeout falling back to a stills crossfade, a…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

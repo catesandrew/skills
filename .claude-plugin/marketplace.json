@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "cw",
-      "description": "57 skills, distributed via the cw plugin command prefix.",
+      "description": "60 skills, distributed via the cw plugin command prefix.",
       "source": "./",
       "strict": false,
       "skills": [
@@ -30,6 +30,7 @@
         "./skills/chrome-run-flow",
         "./skills/cinematic-scroll-site",
         "./skills/commit-message",
+        "./skills/css-fade-up-reveal",
         "./skills/data-table-builder",
         "./skills/design-critique-loop",
         "./skills/dithered-motif-site",
@@ -40,9 +41,11 @@
         "./skills/graph-react-deps",
         "./skills/graph-react-render-tree",
         "./skills/jira-estimate",
+        "./skills/lenis-section-snap-tilt",
         "./skills/microservice-docs",
         "./skills/nextjs-react-query-cache-coordination",
         "./skills/nuqs-url-state",
+        "./skills/pinned-video-blob-scrub",
         "./skills/point-cloud-assembly-scene",
         "./skills/pr-ado-code-review",
         "./skills/pr-ado-open",

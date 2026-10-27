@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pinned video blob scrub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="intro"><h1>Scroll to scrub</h1><p>The clip below is fetched as a Blob and scrubbed by scroll.</p></section>
+
+  <!-- All config lives in data-*; see references/data-attributes.md -->
+  <section class="hero" data-video-wrap
+           data-scroll-start="top top" data-scroll-end="bottom bottom"
+           data-smoothing="0.18" data-ready-timeout="6000" data-ready-threshold="0.6"
+           data-preload="blob"
+           data-desktop-src="assets/clip.mp4 assets/clip.webm"
+           data-mobile-src="assets/clip-mobile.mp4">
+    <div class="stage" data-pin>
+      <div class="media" data-media>
+        <img data-still="1" src="assets/still-1.jpg" alt="">
+        <img data-still="2" src="assets/still-2.jpg" alt="">
+        <video data-video muted playsinline webkit-playsinline preload="auto" poster="assets/still-1.jpg"></video>
+        <div class="loader" data-loader role="progressbar" aria-label="Loading video" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle class="track" cx="20" cy="20" r="18"/><circle class="bar" cx="20" cy="20" r="18"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="outro"><h2>After the pin</h2><p>Normal flow resumes here.</p></section>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js" integrity="sha384-XmJ9SoHtVOHoQUcKvFAzVXwdkKo1Ie3bhmSoIAkcdsHGaIrVJIkmozyq0FJeb/Ly" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js" integrity="sha384-wl5TeDVvOWt30Pbf8aSo2ZrzsOjddu3avOBvHe+p+OhJt9gP6w9YXmDkN5DK2/dF" crossorigin="anonymous"></script>
+  <script type="module" src="pinned-video-scrub.js"></script>
+</body>
+</html>

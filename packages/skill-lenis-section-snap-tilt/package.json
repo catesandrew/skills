@@ -1,0 +1,19 @@
+{
+  "name": "@catesworks/skill-lenis-section-snap-tilt",
+  "version": "1.0.0",
+  "description": "One-section-per-gesture scroll engine on Lenis (wheel with trackpad-flick debounce, touch, keyboard, hash, resize, tall sections, inner scrollers) plus scroll-driven CSS 3D tilt panels and fade-up…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

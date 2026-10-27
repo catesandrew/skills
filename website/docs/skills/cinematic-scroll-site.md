@@ -40,7 +40,7 @@ npm install @catesworks/skill-cinematic-scroll-site
 /plugin install cw@skills
 ```
 
-This last one installs all 57 skills as a single bundled plugin named `cw`; there is no standalone per-skill plugin.
+This last one installs all 60 skills as a single bundled plugin named `cw`; there is no standalone per-skill plugin.
 
 The generation phase needs an image and video connector (Higgsfield MCP by default) and `ffmpeg`. Self-checks for the bundled scripts: `node --test scripts/copy-gate.test.mjs scripts/encode.test.mjs`.
 

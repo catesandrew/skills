@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "October 2026",
+  "abstract": "Pinned GSAP ScrollTrigger hero that scrubs one Blob-preloaded MP4 through a lerped, seek-coalesced rAF loop, with streaming load progress, a ready-gate timeout falling back to a stills crossfade, a reduced-motion path, mobile source selection and data-attribute config. Ships a no-build template with unit-tested pure logic, encoding recipes, a DevTools probe, and an inspection guide.",
+  "references": [
+    "references/engine.md",
+    "references/pin-and-flip.md",
+    "references/video-encoding.md",
+    "references/data-attributes.md",
+    "references/measurement.md",
+    "scripts/probe-scrub.js",
+    "scripts/scrub-logic.test.mjs",
+    "template/index.html",
+    "template/style.css",
+    "template/pinned-video-scrub.js",
+    "template/scrub-logic.js",
+    "template/assets/clip.mp4",
+    "template/assets/clip-mobile.mp4",
+    "template/assets/clip.webm",
+    "template/assets/still-1.jpg",
+    "template/assets/still-2.jpg"
+  ]
+}

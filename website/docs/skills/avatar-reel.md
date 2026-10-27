@@ -56,7 +56,7 @@ npm install @catesworks/skill-avatar-reel
 /plugin install cw@skills
 ```
 
-This last one installs all 57 skills as a single bundled plugin named `cw`; there is no standalone per-skill plugin.
+This last one installs all 60 skills as a single bundled plugin named `cw`; there is no standalone per-skill plugin.
 
 First run: `bash scripts/setup.sh` checks Node 18+, ffmpeg, and python3, installs Remotion and faster-whisper, copies `.env.tpl` to `.env`, and checks that the 1Password CLI is signed in. Then `node scripts/heygen.mjs avatars` lists avatar names and confirms the key without printing it. Self-checks: `node --test scripts/*.test.mjs` runs the cue parser and secret-resolver tests with a fake `op`, needing no network or credentials.
 
