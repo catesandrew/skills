@@ -97,6 +97,7 @@ pnpm --filter website start
 | `before-after-hero-video` | Animated site hero from a before/after reveal: start frame, matching end frame (Higgsfield GPT Image 2), start/end-frame video (Seedance), scroll-scrubbed; roofing example and settings |
 | `high-ticket-site-generator` | Fill-in-the-blanks brief → single-file animated premium site (entrance, hero, ROI calculator) plus the conversion spine: proof, lead form, pricing, FAQ, booking |
 | `avatar-reel` | Script with [bracket] cues → HeyGen avatar → kinetic-caption 9:16 reel (Remotion + FFmpeg), local Whisper timestamps, approval gate |
+| `layered-neural-hero` | Premium dark Next.js hero — video, neural-network canvas and grain layers, glass badge and waitlist form, pulsing CTA; canvas brief with mobile limits, pointer, cleanup and reduced-motion fixes |
 | `point-cloud-assembly-scene` | Three.js point-cloud scene assembling from dust — parametric shape sampling, shared-buffer multi-form architecture, fake curl-noise dust field |
 
 ### API & schemas

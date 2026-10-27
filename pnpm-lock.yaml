@@ -80,6 +80,8 @@ importers:
 
   packages/skill-jira-estimate: {}
 
+  packages/skill-layered-neural-hero: {}
+
   packages/skill-lead-research-assistant: {}
 
   packages/skill-lenis-section-snap-tilt: {}

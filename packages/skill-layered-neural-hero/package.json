@@ -1,0 +1,23 @@
+{
+  "name": "@catesworks/skill-layered-neural-hero",
+  "version": "1.0.0",
+  "description": "Prompt pair for a premium dark-mode Next.js hero: a four-layer background (video loop, interactive neural-network canvas, grain overlay, content), glass badge, gradient-underline heading and a glass…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "scripts/**",
+    "template/**",
+    "templates/**",
+    "remotion/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

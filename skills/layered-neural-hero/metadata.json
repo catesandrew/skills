@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "October 2026",
+  "abstract": "Prompt pair for a premium dark-mode Next.js hero: a four-layer background (video loop, interactive neural-network canvas, grain overlay, content), glass badge, gradient-underline heading and a glass waitlist form with a pulsing CTA, plus a cursor-reactive canvas with mobile node limits and pointer, cleanup and reduced-motion fixes.",
+  "references": [
+    "references/hero-prompt.md",
+    "references/neural-canvas-prompt.md"
+  ],
+  "category": "motion-and-media"
+}
