@@ -7,7 +7,7 @@ description: >-
   chained journey of videos) that scrubs as the visitor scrolls, designed
   from a written design package and shipped as a static site. Triggers on
   "build me a website for X", "cinematic scroll site", "scroll-driven hero
-  video", "scrolling website with AI video", "Higgsfield hero", or "10K
+  video", "scrolling website with AI video", "Higgsfield hero", "Kling hero", or "10K
   websites" style requests. Orchestrates the whole pipeline (tier choice,
   storyboard, image and video generation with cost gates, ffmpeg encode,
   build, copy review, publish); the scrub engine itself lives in
@@ -47,14 +47,17 @@ If a companion is not installed, say so and fall back to the inline recipe.
 
 Run `scripts/setup.sh`, then report a short ✓/✗ checklist with the plan for each ✗:
 
-1. Image and video generation tools available (Higgsfield MCP by default)?
+1. Image and video generation tools available? Detect which provider is
+   connected (Higgsfield, Kling, or both); if none, or both, ask which to use
+   (`references/providers.md`).
 2. `ffmpeg` and `ffprobe` run? (`brew install ffmpeg` / `winget install ffmpeg`)
 3. Node.js installed (`node --version`) for the local preview server?
 4. `ffmpeg-skill` installed?
 
 Install the automatic ones after one yes. The generation connector is the one
-manual step: the user creates a free account and adds the connector URL as a
-custom connector; give exact clicks, then verify the tools appear. Do not
+manual step: the user creates an account with the chosen provider and adds its
+connector as a custom connector; give exact clicks from
+`references/providers.md`, then verify the tools appear. Do not
 raise hosting or domains in this phase.
 
 ## Phase 2. Intake
@@ -94,23 +97,29 @@ storyboard before any credits move; it is the cheapest gate in the pipeline.
 
 ## Phase 6. Generate
 
-Read `references/prompt-laws.md` first. Then, per segment:
+Read `references/prompt-laws.md` and `references/providers.md` first. Run the
+provider capability checklist once and write the answers (provider, tools,
+how images are passed in, cost preview or price sheet, end-frame support) into
+the design package. Then, per segment:
 
-1. **Preflight and say the price** of the starting frame (`get_cost: true` is
-   free). Give the road ahead in one line.
-2. **Starting frame** (about 2 credits): 16:9, 2k, frame one of the motion,
+1. **Preflight and say the price** of the starting frame (a free cost preview
+   if the provider has one, else compute it from its price sheet). Give the
+   road ahead in one line.
+2. **Starting frame** (the cheap step): 16:9, 2k, frame one of the motion,
    in the brand's world, no text, no logos. A real product photo can replace it.
 3. **Inspect the image yourself** for invented trademarks, broken anatomy,
    and composition before animating. Then show the user.
-4. **Model choice**: preflight the same planned video on the top two or three
-   models, present real prices and credits remaining, recommend one, let the
-   user pick. Fold the supporting stills into the same total.
+4. **Provider and model choice**: price the same planned video on the top two
+   or three models (across providers when the user has more than one),
+   converting each to a cost per planned clip. Present real prices and credits
+   remaining, recommend one, let the user pick. Fold the supporting stills into the same total.
 5. **Video**: image-to-video from the approved frame, using the prompt
    templates in `prompt-laws.md`.
 6. **Video gate (never skip, every segment):** save the clip to a review
    folder outside the deploy folder, have the user watch it, re-roll cheaply
    if it fails. Chained segments take the final frame of the approved clip as
-   the next start (see the chaining recipe).
+   the next start, or, where the provider accepts an end frame, are generated
+   between two approved frames (see the chaining recipe).
 7. **Supporting stills** (2-4 small images) in the same world.
 
 Renders take minutes. Say so, then use the wait to scaffold the page. A job
@@ -166,8 +175,10 @@ and bottom there.
 
 ## Common Mistakes
 
-- Generating video before the starting frame is approved: a 2-credit fix
-  becomes a 50-credit one.
+- Generating video before the starting frame is approved: a cheap image fix
+  becomes a full video re-roll.
+- Assuming one provider is cheaper: convert credits, packs, and per-second
+  prices to cost per planned clip and compare live.
 - Skipping the per-segment video gate on chained journeys.
 - Paraphrasing authored copy during the build.
 - Shipping the raw or review folder inside the deploy folder.

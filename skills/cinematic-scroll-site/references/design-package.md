@@ -15,6 +15,7 @@ folder). Tier 1 builds use a trimmed version: fewer bands, same sections.
 
 ## 1. Producer
 - Tier: {1 | 2 | 3}
+- Provider: {Higgsfield | Kling | other}, tools and how images are passed in
 - Segments: {n} x {seconds}s at {model}
 - Credits: images {n} x {price}, video {n} x {price}, total {sum}
 - Assets: existing {list} / generated {list}

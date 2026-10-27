@@ -6,6 +6,7 @@
   "references": [
     "references/prompt-laws.md",
     "references/design-package.md",
-    "references/ffmpeg-recipes.md"
+    "references/ffmpeg-recipes.md",
+    "references/providers.md"
   ]
 }

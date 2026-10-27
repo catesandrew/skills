@@ -53,10 +53,12 @@ object, change the source; don't fight the dither settings.
 
 ## Pipeline
 
-1. **Image prompt** (Higgsfield `nano_banana_pro`) — see
+1. **Image prompt** (written for Higgsfield `nano_banana_pro`; works on other providers, see
+   `references/providers.md`) — see
    `references/image-prompts.md`. Generate via the `generate_image` MCP tool
    if available, or hand the user the filled prompt to paste manually.
-2. **Video prompt** (Higgsfield `seedance_2_0`, image-to-video) — see
+2. **Video prompt** (written for Higgsfield `seedance_2_0`, image-to-video; Kling and
+   others supported, see `references/providers.md`) — see
    `references/video-prompts.md`. Locked-off camera language is
    non-negotiable; a drifting subject cannot be fixed downstream.
 3. **Frame extraction** (ffmpeg) — see `references/frame-extraction.md`.
@@ -117,6 +119,8 @@ object, change the source; don't fight the dither settings.
   window, falling ash over a lost city).
 - `references/video-prompts.md` — Higgsfield `seedance_2_0` image-to-video
   settings and prompt patterns, worked examples matching the image prompts.
+- `references/providers.md` — what carries over to Kling or another generation
+  provider and what changes (connector, models, parameters, cost).
 - `references/frame-extraction.md` — ffmpeg commands for frame rate, crop,
   and background-noise flattening.
 - `references/dither-engine.md` — full algorithm spec: buffer downscale,

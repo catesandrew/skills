@@ -14,5 +14,5 @@ fi
 if [ "$missing" = 1 ]; then
   echo "Install: macOS 'brew install ffmpeg node'; Windows 'winget install ffmpeg' and 'winget install OpenJS.NodeJS'."
 fi
-echo "Not checkable here: image/video generation connector (Higgsfield MCP) and ffmpeg-skill. Check the agent's tool list and skills."
+echo "Not checkable here: image/video generation connector (Higgsfield or Kling connector) and ffmpeg-skill. Check the agent's tool list and skills."
 exit "$missing"

@@ -25,7 +25,7 @@ Bundled tooling mirrors the pipeline: `scripts/setup.sh` for the tool scan, `scr
 
 ## How To Use It
 
-Triggers on: "build me a website for X", "cinematic scroll site", "scroll-driven hero video", "scrolling website with AI video", "Higgsfield hero", or "10K websites" style requests.
+Triggers on: "build me a website for X", "cinematic scroll site", "scroll-driven hero video", "scrolling website with AI video", "Higgsfield hero", "Kling hero", or "10K websites" style requests.
 
 ```sh
 skills add -g catesandrew/skills --skill skills/cinematic-scroll-site
@@ -42,7 +42,7 @@ npm install @catesworks/skill-cinematic-scroll-site
 
 This last one installs all 60 skills as a single bundled plugin named `cw`; there is no standalone per-skill plugin.
 
-The generation phase needs an image and video connector (Higgsfield MCP by default) and `ffmpeg`. Self-checks for the bundled scripts: `node --test scripts/copy-gate.test.mjs scripts/encode.test.mjs`.
+The generation phase needs an image and video provider (Higgsfield or Kling, chosen with the user; see `references/providers.md`) and `ffmpeg`. Self-checks for the bundled scripts: `node --test scripts/copy-gate.test.mjs scripts/encode.test.mjs`.
 
 ## Gotchas & Invariants
 

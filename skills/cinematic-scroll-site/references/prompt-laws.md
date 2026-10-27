@@ -87,15 +87,21 @@ a preset is required by the tool, pick the most neutral one and tell the user.
 
 ## Cost preflighting
 
-Always preflight before spending (`get_cost: true` or the connector's
-equivalent is free). Prices vary by tool and change over time; read them live
-rather than trusting numbers from memory. Rough planning shape: a 2k starting
-frame is a couple of credits, the video is roughly 10 to 55 credits depending
-on the model, and supporting stills are a couple of credits each.
+Always preflight before spending when the provider offers a free cost
+preview; otherwise compute from its price sheet. Prices vary by provider and
+change over time; read them live rather than trusting numbers from memory.
+Rough planning shape: the starting frame is the cheap step, the video is the
+big one and varies widely by model, and supporting stills are cheap each. See
+`providers.md` for per-provider notes and how to compare credits, packs, and
+per-second prices as cost per planned clip.
 
 Present the model tradeoff honestly: a premium model usually buys better
 motion coherence and fewer re-rolls; a cheaper model costs a fraction but may
-need more attempts and shows more morphing. Preflight the same planned shot
+need more attempts and shows more morphing. Price the same planned shot
 on the top two or three models, show real prices and the user's remaining
 balance, recommend one, and let the user decide with the numbers in hand.
 Chained journeys confirm the already-chosen model instead of re-asking.
+
+Where the provider accepts both a start and an end frame, an alternative to
+last-frame extraction is to generate each segment between two approved
+frames (see `providers.md`).
