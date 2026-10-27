@@ -111,6 +111,10 @@ const FILES = [
   'references/**',
   'README.md',
   'agents/**',
+  'scripts/**',
+  'template/**',
+  'templates/**',
+  'remotion/**',
   'CHANGELOG.md',
   'LICENSE',
 ]

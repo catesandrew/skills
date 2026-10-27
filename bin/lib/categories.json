@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "motion-and-media",
+    "title": "Motion & media"
+  },
+  {
+    "slug": "video-production",
+    "title": "Video production"
+  },
+  {
+    "slug": "browser-debugging",
+    "title": "Browser debugging"
+  },
+  {
+    "slug": "react-core",
+    "title": "React core"
+  },
+  {
+    "slug": "react-state-data",
+    "title": "React state & data"
+  },
+  {
+    "slug": "data-tables",
+    "title": "Data tables"
+  },
+  {
+    "slug": "frontend-quality",
+    "title": "Frontend quality"
+  },
+  {
+    "slug": "typescript-apis",
+    "title": "TypeScript & APIs"
+  },
+  {
+    "slug": "delivery-workflow",
+    "title": "Delivery workflow"
+  },
+  {
+    "slug": "architecture-docs",
+    "title": "Architecture & docs"
+  },
+  {
+    "slug": "agent-workflow",
+    "title": "Agent workflow"
+  }
+]

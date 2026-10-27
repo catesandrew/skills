@@ -10,3 +10,6 @@ website/.docusaurus/
 *.db
 .beads-credential-key
 .beads/proxieddb/
+
+__pycache__/
+*.pyc

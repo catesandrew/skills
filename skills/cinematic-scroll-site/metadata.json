@@ -8,5 +8,6 @@
     "references/design-package.md",
     "references/ffmpeg-recipes.md",
     "references/providers.md"
-  ]
+  ],
+  "category": "motion-and-media"
 }

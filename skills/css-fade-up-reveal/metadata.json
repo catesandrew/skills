@@ -13,5 +13,6 @@
     "template/demo.html",
     "scripts/probe-reveals.js",
     "scripts/reveal.test.mjs"
-  ]
+  ],
+  "category": "motion-and-media"
 }

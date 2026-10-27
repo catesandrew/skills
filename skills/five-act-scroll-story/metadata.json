@@ -10,5 +10,6 @@
     "template/FiveActScroll.tsx",
     "template/act-at.js",
     "template/story.json"
-  ]
+  ],
+  "category": "motion-and-media"
 }

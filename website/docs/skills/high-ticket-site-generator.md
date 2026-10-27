@@ -17,7 +17,7 @@ Two references back it: `prompt-template.md` (the original prompt, with its know
 
 ## How To Use It
 
-Triggers on: "build a landing page for <brand>", "Awwwards-style site", "high-ticket site", "$5k website", "site generator prompt", or filling in a brand/niche/vibe/palette template.
+Triggers on: "build a landing page for `<brand>`", "Awwwards-style site", "high-ticket site", "$5k website", "site generator prompt", or filling in a brand/niche/vibe/palette template.
 
 ```sh
 skills add -g catesandrew/skills --skill skills/high-ticket-site-generator
