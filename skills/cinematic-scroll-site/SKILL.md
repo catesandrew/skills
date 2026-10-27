@@ -31,6 +31,7 @@ without a gate. The bar: it should look like it cost thousands of dollars.
 | One-section-per-wheel glide and 3D tilt panels | `lenis-section-snap-tilt` |
 | Lightest scroll polish (smooth scroll, fade-up reveals, no library) | `css-fade-up-reveal` |
 | Animated titles or captions over footage (optional extra) | `remotion-ffmpeg-skill` |
+| Five user-described acts in a Next.js app, optional Shopify (Hydrogen) | `five-act-scroll-story` |
 | Fonts, layout, and color that do not look AI-made | any installed design skill (for example `modern-web-guidance`) |
 
 If a companion is not installed, say so and fall back to the inline recipe.

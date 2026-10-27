@@ -62,6 +62,8 @@ importers:
 
   packages/skill-excel-like-table-navigation: {}
 
+  packages/skill-five-act-scroll-story: {}
+
   packages/skill-frontend-quality-loop: {}
 
   packages/skill-frontend-scaffold: {}
@@ -71,6 +73,8 @@ importers:
   packages/skill-graph-react-deps: {}
 
   packages/skill-graph-react-render-tree: {}
+
+  packages/skill-high-ticket-site-generator: {}
 
   packages/skill-jira-estimate: {}
 

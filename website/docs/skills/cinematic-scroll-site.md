@@ -63,6 +63,7 @@ The generation phase needs an image and video provider (Higgsfield or Kling, cho
 
 - [scroll-video-site](/docs/skills/scroll-video-site): the scrub engine this pipeline builds on (damped playhead, seek coalescing, Lenis and GSAP wiring, iOS quirks).
 - [dithered-motif-site](/docs/skills/dithered-motif-site): another generative-frontend pipeline using produced media as the page centerpiece.
+- [five-act-scroll-story](/docs/skills/five-act-scroll-story): a narrower Next.js variant with exactly five user-described acts and an optional Shopify path.
 - [point-cloud-assembly-scene](/docs/skills/point-cloud-assembly-scene): a related generative-frontend motif technique.
 
 ---
