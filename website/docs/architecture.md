@@ -14,13 +14,21 @@ Every skill lives at `skills/<name>/`, containing:
 
 `.claude-plugin/marketplace.json` lists every skill path and bundles them into one installable plugin, `cw`. This is what `/plugin marketplace add catesandrew/skills` + `/plugin install cw@skills` reads.
 
+```mermaid
+flowchart LR
+  S["skills/NAME/<br/>SKILL.md + metadata.json"] --> M[".claude-plugin/marketplace.json<br/>one plugin, cw"]
+  S --> P["packages/skill-NAME/<br/>generated, never hand-edited"]
+  S --> C["website/docs/skills-catalog.md<br/>generated catalog"]
+  P --> N["npm<br/>@catesworks/skill-NAME"]
+```
+
 ## `packages/` is generated, not hand-edited
 
 Each skill also ships as its own scoped npm package, `@catesworks/skill-<name>`, under `packages/skill-<name>/`. These are **derived** from `skills/<name>/` by the release pipeline — don't hand-edit files under `packages/`, edit the source in `skills/` and regenerate.
 
 The pipeline (`pnpm release` at the repo root, `package.json`):
 
-```
+```sh
 node bin/generate-skill-package-json.mjs --check   # verify packages/*/package.json matches skills/*/metadata.json
 node bin/sync-skill-content.mjs --all               # copy SKILL.md/metadata.json/references/etc. into packages/*
 node bin/validate-skill-package.mjs --all           # sanity-check the generated package contents
@@ -30,6 +38,23 @@ changeset publish                                    # publish any versioned pac
 Versioning goes through [Changesets](https://github.com/changesets/changesets) (`.changeset/`); `pnpm version-packages` bumps versions, then runs `bin/sync-metadata-version.mjs` to keep each skill's `metadata.json.version` in lockstep with its package's `package.json.version`.
 
 `docs/published-skills.json` tracks which `@catesworks/skill-*` package names are actually live on npm — used by the release scripts to distinguish a first publish from a version bump.
+
+Releases and deploys are separate. A pull request runs the verify job; a merge to `main` runs the release job; the website is deployed by hand.
+
+```mermaid
+sequenceDiagram
+  participant Dev
+  participant CI as Verify job
+  participant Rel as Release job
+  participant NPM as npm
+  Dev->>CI: open pull request
+  CI-->>Dev: checks and site build
+  Dev->>Rel: merge to main
+  Rel-->>Dev: open Version PR
+  Dev->>Rel: merge Version PR
+  Rel->>NPM: publish packages
+  Note over Dev,NPM: The site ships separately, by running vercel-deploy by hand
+```
 
 ## This docs site
 

@@ -271,3 +271,111 @@ pre code {
 .navbar__search-input {
   min-height: 44px;
 }
+
+/* Code blocks: ruled frame, mono title bar, flat */
+.theme-code-block {
+  border: 1px solid var(--ds-rule);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.theme-code-block [class*='codeBlockTitle'] {
+  background: var(--ds-paper-deep) !important;
+  color: var(--ds-ink-muted);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-bottom: 1px solid var(--ds-rule);
+  border-radius: 0;
+}
+
+.theme-code-block [class*='codeLine'] ::selection {
+  background: var(--ifm-color-primary);
+  color: var(--ifm-background-color);
+}
+
+/* Mermaid: recolor the rendered SVG from the site palette so it follows light/dark */
+.docusaurus-mermaid-container {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ds-rule);
+  border-radius: var(--ifm-global-radius);
+  overflow-x: auto;
+}
+
+.docusaurus-mermaid-container svg {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.docusaurus-mermaid-container .node rect,
+.docusaurus-mermaid-container .node polygon,
+.docusaurus-mermaid-container .node circle,
+.docusaurus-mermaid-container .node ellipse,
+.docusaurus-mermaid-container .node path,
+.docusaurus-mermaid-container rect.actor {
+  fill: var(--ds-paper-deep) !important;
+  stroke: var(--ifm-color-primary) !important;
+  stroke-width: 1.5px !important;
+}
+
+.docusaurus-mermaid-container .cluster rect {
+  fill: var(--ifm-background-color) !important;
+  stroke: var(--ds-rule) !important;
+}
+
+.docusaurus-mermaid-container .flowchart-link,
+.docusaurus-mermaid-container .edgePaths path,
+.docusaurus-mermaid-container .messageLine0,
+.docusaurus-mermaid-container .messageLine1 {
+  stroke: var(--ds-ink-muted) !important;
+}
+
+.docusaurus-mermaid-container .actor-line,
+.docusaurus-mermaid-container .loopLine {
+  stroke: var(--ds-rule) !important;
+}
+
+.docusaurus-mermaid-container marker path,
+.docusaurus-mermaid-container .arrowheadPath {
+  fill: var(--ds-ink-muted) !important;
+  stroke: var(--ds-ink-muted) !important;
+}
+
+.docusaurus-mermaid-container rect.note {
+  fill: var(--ifm-color-primary-contrast-background) !important;
+  stroke: var(--ifm-color-primary) !important;
+}
+
+.docusaurus-mermaid-container .edgeLabel,
+.docusaurus-mermaid-container .edgeLabel rect,
+.docusaurus-mermaid-container .labelBkg {
+  background-color: var(--ifm-background-surface-color) !important;
+  fill: var(--ifm-background-surface-color) !important;
+}
+
+.docusaurus-mermaid-container text,
+.docusaurus-mermaid-container .actor text,
+.docusaurus-mermaid-container .messageText,
+.docusaurus-mermaid-container .noteText,
+.docusaurus-mermaid-container .label,
+.docusaurus-mermaid-container .nodeLabel,
+.docusaurus-mermaid-container .edgeLabel span,
+.docusaurus-mermaid-container .cluster-label span {
+  fill: var(--ifm-font-color-base) !important;
+  color: var(--ifm-font-color-base) !important;
+}
+
+/* Sequence diagrams reuse the .actor / .noteText classes on <text>; keep labels ink, never box-colored */
+.docusaurus-mermaid-container svg text.actor,
+.docusaurus-mermaid-container svg text.actor > tspan,
+.docusaurus-mermaid-container svg text.noteText,
+.docusaurus-mermaid-container svg text.noteText > tspan,
+.docusaurus-mermaid-container svg text.messageText {
+  fill: var(--ifm-font-color-base) !important;
+  stroke: none !important;
+}

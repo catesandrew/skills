@@ -1,4 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
+import fieldManualLight from './src/prism/field-manual-light';
+import fieldManualDark from './src/prism/field-manual-dark';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import {loadCategories, loadSkills} from './skills-data';
@@ -36,7 +37,10 @@ const config: Config = {
     locales: ['en'],
   },
 
+  markdown: {mermaid: true},
+
   themes: [
+    '@docusaurus/theme-mermaid',
     [
       '@easyops-cn/docusaurus-search-local',
       {
@@ -137,8 +141,22 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} skills. Released under the MIT License.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: fieldManualLight,
+      darkTheme: fieldManualDark,
+      additionalLanguages: ['bash', 'json', 'yaml', 'typescript', 'tsx', 'diff', 'markdown', 'python'],
+    },
+    // Both modes use mermaid's neutral 'base' theme; src/css/custom.css recolors the
+    // rendered SVG from the site's CSS variables so diagrams follow light/dark.
+    mermaid: {
+      theme: {light: 'base', dark: 'base'},
+      options: {
+        themeVariables: {
+          fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
+          fontSize: '15px',
+        },
+        flowchart: {curve: 'basis', htmlLabels: true, padding: 12},
+        sequence: {actorMargin: 20, width: 120, wrap: true, messageFontSize: 14, noteFontSize: 14, actorFontSize: 14},
+      },
     },
   } satisfies Preset.ThemeConfig,
 };

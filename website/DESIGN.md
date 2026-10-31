@@ -29,6 +29,21 @@ colors:
   night-code-ink: "#f3d9c8"
   footer: "#1b1912"
   footer-night: "#0f0e0a"
+  syntax-comment: "#6b6556"
+  syntax-keyword: "#9f3914"
+  syntax-string: "#4a6a1c"
+  syntax-number: "#7a3f9e"
+  syntax-function: "#1b5c8a"
+  syntax-type: "#7f5200"
+  syntax-inserted: "#2f6b1f"
+  syntax-deleted: "#a3261a"
+  syntax-night-comment: "#9a9482"
+  syntax-night-string: "#b5d46a"
+  syntax-night-number: "#d3aef5"
+  syntax-night-function: "#7cc4f0"
+  syntax-night-type: "#f0c060"
+  syntax-night-inserted: "#9ad06a"
+  syntax-night-deleted: "#ff8a80"
 typography:
   display:
     fontFamily: "IBM Plex Sans Condensed, IBM Plex Sans, system-ui, sans-serif"
@@ -56,6 +71,16 @@ typography:
     fontFamily: "IBM Plex Mono, SFMono-Regular, Menlo, Consolas, monospace"
     fontSize: "92%"
     fontWeight: 400
+  label:
+    fontFamily: "IBM Plex Sans, system-ui, sans-serif"
+    fontSize: "0.9rem"
+    fontWeight: 400
+    lineHeight: 1.5
+  caption:
+    fontFamily: "IBM Plex Sans, system-ui, sans-serif"
+    fontSize: "0.8rem"
+    fontWeight: 400
+    lineHeight: 1.5
 rounded:
   global: "0.25rem"
   pill: "999px"
@@ -122,6 +147,9 @@ One signal orange on warm neutrals; the dark mode lifts the accent for contrast 
 - **Night** (#16140f), **Night Surface** (#1e1b15), **Night Ink** (#ece7da), **Night Ink Muted** (#a8a291): the dark counterparts.
 - **Footer** (#1b1912, #0f0e0a in dark): the one dark band in light mode.
 
+### Syntax and diagrams
+Code tokens use a muted set tuned to the code background, every one at 4.5:1 or better: keywords and tags take the accent, strings olive (#4a6a1c, night #b5d46a), numbers plum (#7a3f9e, night #d3aef5), functions and variables blue (#1b5c8a, night #7cc4f0), types and attributes ochre (#7f5200, night #f0c060), comments muted italic. Mermaid diagrams are recolored from the same CSS variables: boxes Paper Deep with an accent outline, edges Ink Muted, labels Ink. Both live in `src/prism/` and `src/css/custom.css`.
+
 ### Named Rules
 **The One Signal Rule.** Orange marks what is clickable or current. It never fills a section background.
 **The Frontmatter Is Normative Rule.** Accent ramps live in `src/css/custom.css` as `--ifm-color-primary-*`; this file mirrors them. Change the CSS first.
@@ -140,6 +168,7 @@ One signal orange on warm neutrals; the dark mode lifts the accent for contrast 
 - **Body** (400, 1rem, 1.65): docs prose, measure capped at 75ch.
 - **Lede** (400, 1.15rem, 1.65): hero subtitle, 60ch.
 - **Code** (400, 92%): inline code, blocks, skill names, example lists.
+- **Label** (400, 0.9rem, 1.5) and **Caption** (400, 0.8rem, 1.5): filter chips, status lines, skill categories, code titles, index counts.
 
 ### Named Rules
 **The Typeable Rule.** Mono is for things a reader can type or copy. It is never a costume for "technical".
