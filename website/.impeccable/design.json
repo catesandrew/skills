@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-31T00:00:00.000Z",
+  "title": "Design System: skills (docs site)",
+  "extensions": {
+    "colorMeta": {
+      "primary": { "role": "primary", "displayName": "Signal Orange", "canonical": "#b13f16", "tonalRamp": ["#7b2c0f", "#953613", "#9f3914", "#b13f16", "#c24418", "#ca4719", "#dc5322"] },
+      "primary-on-dark": { "role": "primary", "displayName": "Ember", "canonical": "#ff8f66", "tonalRamp": ["#f5501c", "#ff7040", "#ff7a49", "#ff8f66", "#ffa482", "#ffae91", "#ffc9b5"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#f5f2ea", "tonalRamp": ["#f5f2ea"] },
+      "surface": { "role": "neutral", "displayName": "Surface", "canonical": "#fbf9f4", "tonalRamp": ["#fbf9f4"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#1c1a15", "tonalRamp": ["#1c1a15"] },
+      "ink-muted": { "role": "neutral", "displayName": "Ink Muted", "canonical": "#5b564b", "tonalRamp": ["#5b564b"] },
+      "rule": { "role": "neutral", "displayName": "Rule", "canonical": "#d9d2c1", "tonalRamp": ["#d9d2c1"] },
+      "paper-deep": { "role": "neutral", "displayName": "Paper Deep", "canonical": "#ece6d8", "tonalRamp": ["#ece6d8"] },
+      "code-bg": { "role": "neutral", "displayName": "Code Bg", "canonical": "#ebe5d6", "tonalRamp": ["#ebe5d6"] },
+      "night": { "role": "neutral", "displayName": "Night", "canonical": "#16140f", "tonalRamp": ["#16140f"] },
+      "night-ink": { "role": "neutral", "displayName": "Night Ink", "canonical": "#ece7da", "tonalRamp": ["#ece7da"] },
+      "footer": { "role": "neutral", "displayName": "Footer", "canonical": "#1b1912", "tonalRamp": ["#1b1912"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Home hero title." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles and the /skills title." },
+      "body": { "displayName": "Body", "purpose": "Docs prose, 75ch measure." },
+      "lede": { "displayName": "Lede", "purpose": "Hero subtitle." },
+      "code": { "displayName": "Code", "purpose": "Commands, skill names, code." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "tint-hover", "value": "background-color 120ms", "purpose": "Hover is a tint change; reduced motion collapses it." }
+    ],
+    "breakpoints": [
+      { "name": "mobile-max", "value": "996px" },
+      { "name": "skill-row-wide", "value": "44rem (container query)" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main call to action.",
+      "html": "<button class=\"ds-btn-primary\">Find a skill</button>",
+      "css": ".ds-btn-primary { background: #b13f16; color: #fff; border: 1px solid #b13f16; border-radius: 0.25rem; min-height: 44px; padding: 0 1.5rem; font-size: 1.1rem; font-weight: 600; cursor: pointer; } .ds-btn-primary:hover { background: #9f3914; } .ds-btn-primary:focus-visible { outline: 2px solid #b13f16; outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Secondary action on the paper palette.",
+      "html": "<button class=\"ds-btn-secondary\">Getting started</button>",
+      "css": ".ds-btn-secondary { background: #ece6d8; color: #1c1a15; border: 1px solid #d9d2c1; border-radius: 0.25rem; min-height: 44px; padding: 0 1.5rem; font-size: 1.1rem; font-weight: 600; cursor: pointer; } .ds-btn-secondary:hover { background: #e2dbc9; } .ds-btn-secondary:focus-visible { outline: 2px solid #b13f16; outline-offset: 2px; }"
+    },
+    {
+      "name": "Category Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Filter chip with a count; selected state fills with the accent.",
+      "html": "<button class=\"ds-chip\">Motion &amp; media <span>14</span></button>",
+      "css": ".ds-chip { min-height: 36px; padding: 0.25rem 0.7rem; font: inherit; font-size: 0.9rem; color: #1c1a15; background: #ece6d8; border: 1px solid #d9d2c1; border-radius: 999px; cursor: pointer; } .ds-chip span { color: #5b564b; font-variant-numeric: tabular-nums; } .ds-chip:focus-visible { outline: 2px solid #b13f16; outline-offset: 2px; }"
+    },
+    {
+      "name": "Skill Row",
+      "kind": "custom",
+      "description": "Ruled list row: mono name, summary, copy action.",
+      "html": "<div class=\"ds-row\"><a href=\"#\">css-fade-up-reveal</a><p>Library-free scroll polish with an IntersectionObserver reveal.</p><button>Copy install</button></div>",
+      "css": ".ds-row { display: grid; gap: 0.35rem 1.5rem; padding: 1rem 0; border-top: 1px solid #d9d2c1; font-family: system-ui, sans-serif; color: #1c1a15; } .ds-row a { font-family: ui-monospace, Menlo, monospace; font-weight: 500; color: #b13f16; min-height: 44px; display: inline-flex; align-items: center; } .ds-row p { margin: 0; } .ds-row button { justify-self: start; min-height: 44px; padding: 0 0.75rem; font: inherit; font-size: 0.85rem; color: #b13f16; background: transparent; border: 1px solid #d9d2c1; border-radius: 0.25rem; cursor: pointer; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Field Manual",
+    "overview": "A reference you carry because it is trusted: warm paper, hairline rules, a condensed heading face that reads like a stamped label, and one signal-orange accent used the way a manual uses a tab or a warning mark. The deep-dive pages are the product, so the interface serves finding and reading them.\n\nThe look is deliberately not the stock Docusaurus template it replaced. Light and dark modes both exist; the dark mode is a warm near-black, not a blue-gray.",
+    "keyCharacteristics": [
+      "Warm paper and ink, never pure white or black; one accent.",
+      "Hairline rules and ruled indexes instead of cards for structure.",
+      "Condensed display face for headings; mono only for commands and skill names.",
+      "Flat: depth comes from tone and rules, not shadow.",
+      "44px minimum targets on every control."
+    ],
+    "rules": [
+      { "name": "The One Signal Rule", "body": "Orange marks what is clickable or current. It never fills a section background.", "section": "colors" },
+      { "name": "The Frontmatter Is Normative Rule", "body": "Accent ramps live in src/css/custom.css as --ifm-color-primary-*; the design file mirrors them. Change the CSS first.", "section": "colors" },
+      { "name": "The Typeable Rule", "body": "Mono is for things a reader can type or copy. It is never a costume for technical.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Nothing lifts at rest or on hover; hover is a tint change.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep light and dark modes, with the dark palette warm.",
+      "Do derive counts and skill lists from skills-data.ts; never type a number in copy.",
+      "Do use ruled rows and indexes for structure.",
+      "Do keep every interactive target at 44px or larger."
+    ],
+    "donts": [
+      "Don't fill sections with the accent or use it for decoration.",
+      "Don't use cards of icon, heading and text as page structure.",
+      "Don't use a colored side border on callouts, list items or menu items.",
+      "Don't hardcode N skills anywhere; the build computes it.",
+      "Don't break the generated catalog or pnpm docs:check."
+    ]
+  }
+}

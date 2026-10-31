@@ -1,30 +1,135 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
 .hero {
-  padding: 4rem 0 2rem;
-  text-align: center;
+  padding: 4.5rem 0 3rem;
+  border-bottom: 1px solid var(--ds-rule);
 }
 
 .heroTitle {
-  font-size: 2.75rem;
-  max-width: 40rem;
-  margin: 0 auto 1rem;
+  font-size: clamp(2.25rem, 5.5vw, 4rem);
+  line-height: 1.05;
+  max-width: 18ch;
+  margin: 0 0 1.25rem;
 }
 
 .heroSubtitle {
-  max-width: 42rem;
-  margin: 0 auto 1.5rem;
+  max-width: 60ch;
+  margin: 0 0 2rem;
   font-size: 1.15rem;
-  color: var(--ifm-color-emphasis-700);
+  color: var(--ds-ink-muted);
+}
+
+.install {
+  max-width: 40rem;
+  margin-bottom: 2rem;
+}
+
+.install :global(.tabs) {
+  margin-bottom: 0;
+}
+
+.install :global(.theme-code-block) {
+  margin-bottom: 0;
 }
 
 .heroCtas {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
   flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.section + .section {
+  border-top: 1px solid var(--ds-rule);
+}
+
+.sectionTitle {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 0 0 1.5rem;
+}
+
+/* Category index: a ruled table-of-contents, not a card grid */
+.index {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
+  column-gap: 3rem;
+}
+
+.indexRow {
+  border-top: 1px solid var(--ds-rule);
+}
+
+.indexLink {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.15rem 1rem;
+  padding: 0.9rem 0.25rem;
+  color: inherit;
+  text-decoration: none;
+  min-height: 44px;
+}
+
+.indexLink:hover {
+  color: inherit;
+  text-decoration: none;
+  background: var(--ifm-color-primary-contrast-background);
+}
+
+.indexTitle {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--ifm-color-primary);
+}
+
+.indexCount {
+  font-variant-numeric: tabular-nums;
+  color: var(--ds-ink-muted);
+}
+
+.indexExamples {
+  grid-column: 1 / -1;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.85rem;
+  color: var(--ds-ink-muted);
+  overflow-wrap: anywhere;
+}
+
+.excerpt {
+  max-width: 44rem;
+  padding: 1.5rem;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ds-rule);
+  border-radius: var(--ifm-global-radius);
+}
+
+.excerptSource {
+  margin: 0 0 0.75rem;
+  color: var(--ds-ink-muted);
+  font-size: 0.9rem;
+}
+
+.excerptList {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.excerptList li + li {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 996px) {
+  .hero {
+    padding: 2.5rem 0 2rem;
+  }
+}
+
+.excerpt > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
 }

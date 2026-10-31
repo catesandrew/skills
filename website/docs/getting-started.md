@@ -16,7 +16,7 @@ This repo is a personal, cross-agent collection of [Agent Skills](https://agents
 
 Three independent install channels — pick whichever fits your workflow. See [Installing via the Claude Code plugin marketplace](./installing-plugin.md) for the full walkthrough of the first one.
 
-### 1. Claude Code plugin marketplace (all 52 at once)
+### 1. Claude Code plugin marketplace (every skill at once)
 
 ```
 /plugin marketplace add catesandrew/skills
@@ -47,7 +47,7 @@ npm install @catesworks/skill-commit-message
 
 ## What's here
 
-- **[Skill Catalog](./skills-catalog.md)** — all 52 skills, auto-generated with a one-liner, use case, and install command for each, plus a deep-dive page per skill.
+- **[Skill Catalog](./skills-catalog.md)** — every skill, auto-generated with a one-liner, use case, and install command for each, plus a deep-dive page per skill.
 - **[Architecture](./architecture.md)** — how the repo is organized: `skills/` (source of truth), `packages/` (generated npm packages), the release pipeline, and the scope rule that keeps this repo public-safe.
 
 ## Contributing a skill

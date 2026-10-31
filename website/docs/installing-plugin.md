@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Installing via the Claude Code plugin marketplace
 
-This repo hosts its own [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces) directly (`.claude-plugin/marketplace.json`) — no separate registry, no publishing step beyond pushing to `main`. It bundles all 52 skills into a single installable plugin named `cw`.
+This repo hosts its own [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces) directly (`.claude-plugin/marketplace.json`) — no separate registry, no publishing step beyond pushing to `main`. It bundles every skill into a single installable plugin named `cw`.
 
 This is the fastest way to get every skill at once inside Claude Code, and it updates in one command whenever new skills ship.
 
@@ -74,4 +74,4 @@ Or declare the plugin directly under [`enabledPlugins`](https://code.claude.com/
 
 ## Other install channels
 
-The plugin marketplace isn't the only way in — see [Getting Started](./getting-started.md#installing-skills) for the `skills` CLI and npm-package alternatives if you only want a single skill rather than all 52.
+The plugin marketplace isn't the only way in — see [Getting Started](./getting-started.md#installing-skills) for the `skills` CLI and npm-package alternatives if you only want a single skill rather than all of them.

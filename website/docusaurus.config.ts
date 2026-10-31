@@ -1,13 +1,18 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import {loadCategories, loadSkills} from './skills-data';
+
+const skills = loadSkills();
+const categories = loadCategories();
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
   title: 'skills',
-  tagline: '52 cross-agent skills for Claude Code, Codex, and other AI coding agents.',
-  favicon: 'img/favicon.ico',
+  tagline: `${skills.length} cross-agent skills for Claude Code, Codex, and other AI coding agents.`,
+  customFields: {skills, categories},
+  favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -31,6 +36,19 @@ const config: Config = {
     locales: ['en'],
   },
 
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        indexBlog: false,
+        docsRouteBasePath: '/docs',
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
@@ -48,16 +66,16 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
       title: 'skills',
       logo: {
-        alt: 'skills Logo',
+        alt: 'skills',
         src: 'img/logo.svg',
+        srcDark: 'img/logo-dark.svg',
       },
       items: [
         {
@@ -67,9 +85,13 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          to: '/docs/skills-catalog',
+          to: '/skills',
           label: 'Skills',
           position: 'left',
+        },
+        {
+          type: 'search',
+          position: 'right',
         },
         {
           href: 'https://github.com/catesandrew/skills',
@@ -89,7 +111,11 @@ const config: Config = {
               to: '/docs/getting-started',
             },
             {
-              label: 'Skill Catalog',
+              label: 'Find a skill',
+              to: '/skills',
+            },
+            {
+              label: 'Full catalog',
               to: '/docs/skills-catalog',
             },
           ],

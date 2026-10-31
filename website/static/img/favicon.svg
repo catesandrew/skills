@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <style>.i{stroke:#1c1a15}.t{fill:#b13f16}@media (prefers-color-scheme:dark){.i{stroke:#ece7da}.t{fill:#ff8f66}}</style>
+  <rect class="i" x="3" y="6" width="26" height="21" rx="2" fill="none" stroke-width="2"/>
+  <path class="t" d="M3 8a2 2 0 0 1 2-2h9l2 3H3z"/>
+  <path class="i" d="M8 15h16M8 19.5h16M8 24h10" stroke-width="1.75" stroke-linecap="round"/>
+</svg>
