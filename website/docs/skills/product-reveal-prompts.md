@@ -24,6 +24,8 @@ It then outputs four prompts with every blank filled in:
 - **C, video transition:** a smooth transition from A to B, with wrappers for Google Flow ("frames to video"), Kling (start and end frame), and tools without end-frame support.
 - **D, website prompt:** the scrollytelling prompt with the brand, object, frame count, and real copy for four beats.
 
+Two longer reference templates back prompts B and C: `references/explosion-shot-template.md` (exploded engineering shot with fluid dynamics, material fidelity, and engineering-accurate deconstruction) and `references/transition-flow-template.md` (assembled-to-exploded transition). Use them when the short prompts drift.
+
 A table of seven impossible moments follows the prompts (explosion, fly-through, molten birth, frozen time, bloom, descent, light reveal), for subjects where `exploded` or `burst` is not the right transformation.
 
 A reliability checklist also follows: reject a cropped start frame, check that A and B match in position and scale, use a start-and-end-frame video tool at the highest tier, then cut to roughly 25 to 30 fps WebP frames in `/public/sequence/`.
@@ -65,4 +67,4 @@ Inputs: `subject` (required) and `site_prompt_path`, the path to the website pro
 
 ---
 
-_Sourced from: skills/product-reveal-prompts/SKILL.md, skills/product-reveal-prompts/metadata.json_
+_Sourced from: skills/product-reveal-prompts/SKILL.md, skills/product-reveal-prompts/metadata.json, skills/product-reveal-prompts/references/_

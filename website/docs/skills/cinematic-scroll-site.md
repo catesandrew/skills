@@ -9,7 +9,7 @@ description: End-to-end pipeline for cinematic scroll-driven websites, covering 
 
 `scroll-video-site` documents the engine that scrubs a video with scroll, but a real site starts earlier and ends later: someone has to decide what the hero shows, generate the footage without burning credits, encode it so it scrubs smoothly, write copy that does not read as AI, and put the result online. `cinematic-scroll-site` is that whole pipeline as one orchestrating skill.
 
-It was reconstructed from a third-party "10K Websites" skill whose `SKILL.md` was shared publicly while its `references/` folder was not. The phase structure, tiers, gates, and copy rules follow that `SKILL.md`. The reference files (`prompt-laws.md`, `design-package.md`, `ffmpeg-recipes.md`) were written fresh from what the original said each should contain, so their specifics are this repo's, not the original author's. Hosting-specific deploy and troubleshooting files were deliberately dropped: publishing is a static folder on any host, and known pitfalls live in the skill's Common Mistakes list.
+It was reconstructed from a third-party "10K Websites" skill whose `SKILL.md` was shared publicly while its `references/` folder was not. The phase structure, tiers, gates, and copy rules follow that `SKILL.md`. The reference files (`prompt-laws.md`, `design-package.md`, `ffmpeg-recipes.md`) were written fresh from what the original said each should contain, so their specifics are this repo's, not the original author's. The hosting-specific deploy file was deliberately dropped, since publishing is a static folder on any host. Known pitfalls live in the skill's Common Mistakes list and in `references/troubleshooting.md`.
 
 ## What It Does
 
@@ -55,6 +55,7 @@ The generation phase needs an image and video provider (Higgsfield or Kling, cho
 - Decline the connector's style presets and auto-enhance; they break palette and chaining consistency.
 - Prices change: preflight and read them live, never quote from memory.
 - A failed or moderation-flagged render gets one reworded retry, then a more lenient model; check the balance instead of assuming a refund, and tell the user about every retry (`references/providers.md`).
+- Check `references/troubleshooting.md` first when something breaks. It maps symptom to cause to fix for slow renders, a trademark in a generated frame, a broken hero on `file://`, stuttering scrub, unreadable captions, mid-chain credit exhaustion, stale prices, and phone-only layout bugs.
 - Colorway variants of an approved still come from an `ffmpeg` hue shift, not another generation (`references/ffmpeg-recipes.md`).
 - Encode for scrubbing: no audio, short keyframe interval, `+faststart`; try `-g 1` only if a short GOP still stutters.
 - Keep raw generations, review clips, extracted frames, and the design package out of the deploy folder.

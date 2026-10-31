@@ -42,6 +42,7 @@ If a companion is not installed, say so and fall back to the inline recipe.
 - `scripts/setup.sh`: Phase 1 scan, prints ✓/✗ per tool, installs nothing.
 - `scripts/encode.mjs`: `hero | poster | last | concat` encodes (`--dry-run` prints the command).
 - `scripts/copy-gate.mjs <index.html>`: the Phase 9 copy gate, exits 1 on any hit.
+- `references/troubleshooting.md`: symptom, cause, fix for scrub, deploy and render problems.
 - `template/index.html` + `template/scrub.js`: starter page with the vanilla scrub engine, band map, loading ring, and poster layout for touch and reduced motion. Copy into the project's deploy folder and fill the `{{placeholders}}` from the design package.
 - Self-checks: `node --test scripts/*.test.mjs`.
 

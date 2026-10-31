@@ -32,6 +32,8 @@ Input: a subject only. Output: copy-paste prompts for ANY image/video tool (Gemi
 
 **D. Website prompt**: fill the Antigravity scrollytelling prompt in the scrollytelling prompt file at `${input:site_prompt_path}` (or any Antigravity/Next.js scroll-canvas prompt) (section ANTIGRAVITY SYSTEM PROMPT): set the brand, OBJECT, FRAME_COUNT, and write beats A-D with real copy for this product.
 
+Longer, fully detailed versions of prompts B and C (fluid dynamics, material fidelity, engineering-accurate deconstruction) live in `references/explosion-shot-template.md` and `references/transition-flow-template.md`. Use them when the short prompts drift.
+
 ## 3. Reliability checklist (print after the prompts)
 1. Generate A; reject if product is cropped, tilted oddly, or the background isn't flat.
 2. Generate B with A as reference; reject if framing/angle/colors drifted or the product is unrecognizable. Retry with "keep the product exactly as in the reference".

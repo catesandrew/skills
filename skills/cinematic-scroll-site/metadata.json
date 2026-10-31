@@ -7,7 +7,8 @@
     "references/prompt-laws.md",
     "references/design-package.md",
     "references/ffmpeg-recipes.md",
-    "references/providers.md"
+    "references/providers.md",
+    "references/troubleshooting.md"
   ],
   "category": "motion-and-media"
 }
