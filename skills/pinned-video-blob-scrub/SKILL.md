@@ -99,7 +99,9 @@ work from `file://`).
 - `data-ready-threshold` semantics: the attribute and default were seen, its
   use was not. The fraction-of-duration-buffered meaning is this skill's.
 - The observed page's iOS `unlock()` trigger; real-device iOS/Safari seeking
-  of Blob URLs, and whether revoking the Blob early is safe.
+  of Blob URLs (the iOS 18.0 and 26.5 simulators seek fine after `video.load()`,
+  but an intermittent touch-scroll seek stall appeared on iOS 18.0 only), and
+  whether revoking the Blob early is safe.
 - Progress-ring values mid-download (checked only at start and completion on
   localhost), Slow-3G behaviour, 120 Hz feel.
 - Whether the 2000 ms observed timeout was tuned for the 14 MB file; at that

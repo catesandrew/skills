@@ -57,6 +57,10 @@ video.load()
   CORS also hides it unless the server sends `Access-Control-Expose-Headers: Content-Length`
   on cross-origin assets. Missing or zero means indeterminate, never 0%.
 - Always pass the `AbortController` signal; the gate and teardown abort it.
+- `video.load()` after assigning `src` is load-bearing on iOS Safari: it ignores
+  `preload="auto"` and stops at the metadata, so without it the first seek never
+  lands (measured on the iOS 18.0 and 26.5 simulators). Keep it on both the Blob
+  and the direct path.
 - **Error path:** a network failure (offline, CORS, 4xx/5xx) is not final. Set
   `video.src = src` and let the element try (observed fallback: "on fetch error
   use the URL directly"); the element's own `error` event then goes to the gate.
@@ -143,8 +147,10 @@ unlock()                                                  // muted+playsinline u
 for (const ev of ['pointerdown', 'touchstart', 'keydown']) addEventListener(ev, unlock, { once: true, passive: true })
 ```
 
-Requires `muted playsinline`. Not verified on a real iOS device; treat as the
-standard workaround, test on hardware.
+Requires `muted playsinline`. The simulators showed that `video.load()` after
+`src` (section 2) is what lets the first seek land; this play-then-pause unlock
+also worked there, but `play()` can be refused in Low Power Mode (unverified), so
+do not rely on it alone. Not verified on a physical device; test on hardware.
 
 ## 8. visibilitychange, resize, refresh
 

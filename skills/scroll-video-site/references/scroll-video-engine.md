@@ -97,6 +97,34 @@ export const SEEK_THRESHOLD = 0.08;  // seconds; avoid thrashing on sub-percepti
 Tune `DAMPING_RATE` per project — a slower, moodier site can go lower (more
 lag, smoother feel); a snappier product demo can go higher.
 
+## iOS Safari: `load()` after `src`, and how to test it
+
+Measured on the iOS 18.0 and iOS 26.5 simulators (real Safari, a muted
+`playsinline` clip, Blob URL or plain URL):
+
+| After setting `src` | Result |
+|---|---|
+| nothing else | `loadedmetadata` fires, `readyState` stays 1, and the first `currentTime` write leaves `seeking` true forever: `seeked` never fires |
+| `video.load()` | `seeked` fires about 10 ms after the metadata, later seeks land in 10 to 15 ms, frames paint without `play()` |
+| `video.play().then(() => video.pause())` | also unblocks the seek (17 to 83 ms), but `play()` can be refused (Low Power Mode, unverified) |
+
+Prefer `load()`: it needs no permission. A page that gates its reveal on the
+first `seeked` hits its decode timeout and shows the stills, so nothing looks
+broken until the visitor scrolls and the picture never changes. Check the page's
+own state or `video.readyState` in a Web Inspector session instead of trusting
+a screenshot of the first frame.
+
+Testing: Playwright's WebKit with an iPhone device profile is the desktop engine
+and does not reproduce this. Use the iOS Simulator (Safari Web Inspector for JS
+probes, Appium XCUITest with WebdriverIO for real touch drags and flicks) or a
+physical device.
+
+Observed but unconfirmed on hardware: on the iOS 18.0 simulator only, real touch
+scrolling sometimes left a seek pending for seconds (`seeking` true, no
+`seeked`), while iOS 26.5 or programmatic scrolling never did. Re-seeking,
+`fastSeek()` and `play()`/`pause()` did not clear a hung seek. Treat a
+physical iOS 18 phone as the final check.
+
 ## StrictMode cleanup trap, concretely
 
 ```js

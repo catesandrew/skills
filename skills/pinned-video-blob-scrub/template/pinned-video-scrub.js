@@ -188,7 +188,7 @@ export function initPinnedVideoScrub(wrap, deps = {}) {
     } else {
       video.src = src
     }
-    video.load()
+    video.load() // load-bearing on iOS Safari: without it the first seek never lands
     check()
   }
 

@@ -93,7 +93,14 @@ it only tears down real unmounts, not the StrictMode probe-mount.
 programmatic seeking. Keep the video muted (required for any autoplay-like
 behavior) and test scrubbing specifically on iOS Safari, not just desktop
 Chrome — seek-queue bugs that are invisible on desktop show up as visible
-stutter on iOS.
+stutter on iOS. Also call `video.load()` right after setting `video.src` (Blob
+URL or plain URL): iOS Safari ignores `preload="auto"` and stops at the
+metadata (`readyState 1`), so without `load()` the first `currentTime` write never
+fires `seeked`. A reveal gated on `seeked` then times out and the page quietly
+falls back to its stills, which look fine until you scroll. Desktop WebKit
+(including Playwright's WebKit with an iPhone profile) loads the data anyway and
+passes, so test on the iOS Simulator or a device. Details and a test recipe are
+in the engine reference ("iOS Safari").
 
 See `references/scroll-video-engine.md` for the fuller gotcha list and
 `references/scroll-video-engine.tsx` for a reference component implementing

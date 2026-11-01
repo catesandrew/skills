@@ -18,6 +18,10 @@ Symptom, cause, fix. Check here first when something breaks.
 **Cause:** overlapping `currentTime` seeks (a new seek before the last `seeked`), or a long keyframe interval in the source.
 **Fix:** confirm seeks are serialized. Then confirm the video was re-encoded with `-g 1 -keyint_min 1` (`ffmpeg-recipes.md`). A long GOP stutters no matter how good the JS is.
 
+## Hero shows only stills on an iPhone and never scrubs
+**Cause:** iOS Safari ignores `preload="auto"` and stops at the metadata, so after `video.src = ...` the first seek never fires `seeked` unless `video.load()` is called. A reveal gated on that seek times out and the page falls back to its stills, which look like the first frame until the visitor scrolls. Desktop WebKit and Playwright's iPhone profile do not reproduce it.
+**Fix:** call `video.load()` right after assigning `src` (the Blob path and the direct path). Verify on the iOS Simulator or a device: `video.readyState` should reach 4 and `currentTime` should follow the scroll.
+
 ## Captions unreadable over a bright or busy frame
 **Cause:** the scrim was checked against an average frame, not the band's worst-contrast frame.
 **Fix:** re-check at the brightest or busiest frame inside that caption's scroll range. Strengthen the scrim for that band only, not the whole video.
