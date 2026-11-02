@@ -45,6 +45,7 @@
   document.querySelectorAll('.film').forEach((v, i) => {
     v.src = cfg.acts[i].video
     v.poster = cfg.acts[i].poster
+    v.load() // iOS Safari ignores preload="auto" and stops at the metadata; without load() seeks never land
   })
 </script>
 </body>
