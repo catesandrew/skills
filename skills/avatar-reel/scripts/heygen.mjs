@@ -2,6 +2,7 @@
 // HeyGen client (v2 API). Usage:
 //   heygen.mjs avatars
 //   heygen.mjs generate --avatar "Name" --text-file spoken.txt --out avatar.mp4 [--voice ID] [--bg "#0b0b10"] [--look ID]
+import { isMain } from './is-main.mjs'
 import { readFileSync, writeFileSync } from 'node:fs'
 import { loadEnv, secret, redact } from './env.mjs'
 
@@ -59,7 +60,7 @@ export async function generate({ avatar, text, voice, bg, look, out, pollMs = 80
   }
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (isMain(import.meta.url)) {
   const [cmd, ...rest] = process.argv.slice(2)
   const o = {}
   for (let i = 0; i < rest.length; i += 2) o[rest[i].replace(/^--/, '')] = rest[i + 1]
