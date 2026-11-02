@@ -40,3 +40,18 @@ test('python resolver matches', () => {
     { encoding: 'utf8', cwd: new URL('.', import.meta.url).pathname, env: { PATH: process.env.PATH, OP_BIN: op, K_OP_REF: 'op://v/i/ok' } })
   assert.equal(r.stdout.trim(), 's3cret-value')
 })
+
+test('CLI guard runs from a path with a space and via symlink', async () => {
+  const { mkdtempSync: mk, cpSync, symlinkSync } = await import('node:fs')
+  const base = mk(join(tmpdir(), 'a b-'))
+  cpSync(new URL('.', import.meta.url).pathname, join(base, 's'), { recursive: true })
+  const usage = (p) => spawnSync('node', [p, 'bogus'], { encoding: 'utf8', env: { PATH: process.env.PATH, OP_BIN: op } })
+  assert.match(usage(join(base, 's', 'heygen.mjs')).stderr, /usage: heygen/)
+  symlinkSync(join(base, 's', 'heygen.mjs'), join(base, 'link.mjs'))
+  assert.match(usage(join(base, 'link.mjs')).stderr, /usage: heygen/)
+})
+test('empty op output reports not configured', () => {
+  const e = join(dir, 'op-empty'); writeFileSync(e, '#!/bin/sh\nexit 0\n'); chmodSync(e, 0o755)
+  const r = run({ OP_BIN: e }, 'secret("K")')
+  assert.equal(r.status, 3); assert.match(r.stderr, /not configured/)
+})

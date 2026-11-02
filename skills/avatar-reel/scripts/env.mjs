@@ -36,10 +36,9 @@ export function secret(name) {
   const r = spawnSync(process.env.OP_BIN || 'op', ['read', '--no-newline', ref], { encoding: 'utf8' })
   if (r.error) fail(`1Password CLI \`op\` not found. Install it (brew install 1password-cli) and run scripts/setup.sh.`)
   if (r.status) fail(`\`op read\` failed for ${name} (${ref}). Run \`op whoami\`; sign in via the 1Password app integration or set OP_SERVICE_ACCOUNT_TOKEN. Check the reference path.`)
+  if (!r.stdout) fail(`${name} is not configured. Put \`${name}=op://<vault>/<item>/<field>\` in .env (see .env.tpl) or set ${name}_OP_REF. Do not paste the key into chat.`)
   resolved.add(r.stdout)
   return r.stdout
-  if (optional) return ''
-  fail(`${name} is not configured. Put \`${name}=op://<vault>/<item>/<field>\` in .env (see .env.tpl) or set ${name}_OP_REF. Do not paste the key into chat.`)
 }
 
 export const redact = (s) => [...resolved].reduce((t, v) => (v ? String(t).replaceAll(v, '***') : t), String(s))

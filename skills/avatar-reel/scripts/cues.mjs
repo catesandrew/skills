@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Parse a reel script into spoken text + [bracket] cues, and map cues to timestamps.
 // CLI: cues.mjs parse <script.txt> <spoken.txt> | map <script.txt> <transcript.json> <cues.json>
+import { isMain } from './is-main.mjs'
 import { readFileSync, writeFileSync } from 'node:fs'
 
 export const CUE_TYPES = ['title', 'stat', 'lower', 'emphasis', 'sfx', 'zoom', 'music']
@@ -98,7 +99,7 @@ export function mapCues(parsed, tw) {
   return { cues, alignment: { matched, total, ratio: total ? matched / total : 1 } }
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (isMain(import.meta.url)) {
   const [cmd, ...a] = process.argv.slice(2)
   const parsed = a[0] ? parseScript(readFileSync(a[0], 'utf8')) : null
   if (cmd === 'parse' && parsed) {

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Cut dead air: silences longer than --min (default 0.6s) are shortened, leaving --pad (0.2s) each side.
 // Usage: trim.mjs <in.mp4> <out.mp4> [--min 0.6] [--db -35] [--pad 0.2]
+import { isMain } from './is-main.mjs'
 import { spawnSync } from 'node:child_process'
 import { writeFileSync, mkdtempSync } from 'node:fs'
 import { tmpdir } from 'node:os'
@@ -54,7 +55,7 @@ export function trim(input, output, { min = 0.6, db = -35, pad = 0.2 } = {}) {
   return { before: total, after: duration(output), segments: segs.length }
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (isMain(import.meta.url)) {
   const [i, o, ...rest] = process.argv.slice(2)
   const opt = {}
   for (let k = 0; k < rest.length; k += 2) opt[rest[k].slice(2)] = +rest[k + 1]
