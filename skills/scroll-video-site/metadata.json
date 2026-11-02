@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "organization": "Personal",
   "date": "August 2026",
   "abstract": "Builds a full-bleed, scroll-scrubbed video landing page where scroll position maps to a video's currentTime, covering a damped-playhead seek-coalescing engine, Lenis smooth scrolling wired through GSAP's ticker, an optional autoplay tour control, and anti-slop interface constraints.",
