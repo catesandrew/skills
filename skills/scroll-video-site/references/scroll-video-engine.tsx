@@ -103,6 +103,11 @@ export function ScrollVideo({
     video.addEventListener('loadedmetadata', onLoadedMetadata);
     video.addEventListener('progress', onProgress);
     video.addEventListener('seeked', onSeeked);
+    // iOS Safari ignores preload="auto" and stops at the metadata, so the first
+    // seek never lands without an explicit load(). It also re-fires
+    // loadedmetadata if hydration beat this effect. Safe under StrictMode:
+    // nothing is shown yet, so the doubled call only restarts the load.
+    video.load();
     rafId = requestAnimationFrame(tick);
 
     const st = ScrollTrigger.create({
