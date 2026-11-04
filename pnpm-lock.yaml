@@ -16,6 +16,8 @@ importers:
 
   packages/skill-ai-governance: {}
 
+  packages/skill-app-hardening-audit: {}
+
   packages/skill-architecture-corpus: {}
 
   packages/skill-ask-me: {}

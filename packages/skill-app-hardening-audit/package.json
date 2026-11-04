@@ -1,0 +1,23 @@
+{
+  "name": "@catesworks/skill-app-hardening-audit",
+  "version": "1.0.0",
+  "description": "Runs a checklist-driven security and launch-readiness audit of an app codebase (especially Supabase / Next.js / Stripe / LLM stacks): detects the stack and app profile, runs domain checks for auth,…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "scripts/**",
+    "template/**",
+    "templates/**",
+    "remotion/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

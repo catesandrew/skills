@@ -6,12 +6,13 @@
   "plugins": [
     {
       "name": "cw",
-      "description": "68 skills, distributed via the cw plugin command prefix.",
+      "description": "69 skills, distributed via the cw plugin command prefix.",
       "source": "./",
       "strict": false,
       "skills": [
         "./skills/agent-browser",
         "./skills/ai-governance",
+        "./skills/app-hardening-audit",
         "./skills/architecture-corpus",
         "./skills/ask-me",
         "./skills/audit-a11y-code",

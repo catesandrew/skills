@@ -50,6 +50,7 @@ pnpm --filter website start
 |-------|-------------|
 | `audit-a11y-code` | Static accessibility review of components/templates against WCAG 2.1 AA |
 | `audit-react-component` | React 18+/19 component audit — hooks, performance, memoization, controlled inputs |
+| `app-hardening-audit` | Security and launch-readiness audit for Supabase/Next.js/Stripe/LLM apps — RLS, secrets, webhooks, paywall, cost caps, prompt injection, agent OAuth, privacy; Pass/Fail/N/A findings with file:line evidence and fixes |
 
 ### React, tables & state
 
