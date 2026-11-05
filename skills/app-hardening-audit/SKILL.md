@@ -58,6 +58,17 @@ Write a one-paragraph **Stack** section: framework + version, router type, hosti
 
 Resolve `${input:profile}`. If `auto`, set each flag from the evidence column above and **list the evidence** (e.g. "`ai`: `openai@5` in package.json, `OPENAI_API_KEY` in `.env.example`"). Ask the user to confirm the profile only if a flag is ambiguous and it changes Critical-severity coverage (for example, whether EU users exist).
 
+### 2b. Build the AI system inventory (only when `ai` or `agent-oauth` is on)
+
+AI features are probabilistic: the same input can give different outputs and the behavior space cannot be enumerated, so the audit works from outcomes, not only from code paths. For each AI feature, record in the report:
+
+- **Never-behaviors:** the written list of outcomes it must never produce, and its owner (LLM-12). If none exists, that is the first finding.
+- **Channels in:** every place untrusted content can enter (chat, web pages, repos/dependencies, uploads, inbound email/messages, tickets, retrieved documents).
+- **Channels out and tools:** every action it can take (send, write, delete, pay, post, run code) and the credential each uses.
+- **Runtime enforcement and re-testing:** what blocks a harmful call at execution time (AGT-13) and when it was last adversarially tested (LLM-13).
+
+The inventory drives LLM-*, AGT-*, and ST-05/12/13/14.
+
 ### 3. Run each check
 
 Load the reference file for each selected domain and run its checks in ID order:
@@ -126,7 +137,16 @@ Each check has a default severity. Raise or lower it with a one-line reason tied
 
 Launch guidance for the report's verdict line: any open Critical means "not ready"; open Highs need an owner and date. The human still decides.
 
+AI-specific reading of the scale: a **Pass** on an LLM-* or AGT-* check means the control exists and you read it. It never means the model "cannot be jailbroken" or that the feature is "safe." Static review cannot elicit model behavior, so report what the code limits and list what was not tested.
+
 ## Common Mistakes
+
+- **Writing an "all clear" for AI features.** There is no clean bill of health for a stochastic system, and security is a point-in-time result. Say which declared behaviors are blocked by code, which were never tested, and recommend re-testing on model, prompt, or tool changes.
+- **Treating "read-only" as low risk.** A bot that can read HR, finance, or CRM data is a disclosure path for anyone who can talk to it. Check who it asks as, not only what it can write.
+- **Assuming an attacker is required.** A benign request ("delete unused files") can destroy recovery data. Check destructive tools for previews, caps, and reversibility even when no hostile user exists.
+- **Counting a confirmation prompt as a control without reading it.** Prompts on every action cause approval fatigue; a human rubber stamp is not a control. Check that prompts are risk-tiered and show the concrete action.
+- **Watching only the chat channel.** Web pages, repos, files, and inbound email are also inputs, and the same agent acts on them with the user's credentials.
+- **Expecting existing monitoring to catch agent harm.** Data sent out by an agent looks like normal traffic. Confirm tool-call logs exist and something reads them.
 
 - **Trusting a grep.** `rg "enable row level security"` finding a hit does not mean every table has it. List every table in `public` from the migrations and check each.
 - **Marking Pass from the client code.** Hiding a button is not authorization. Every AUTHZ/ENT/PAY Pass needs the *server-side* line that enforces it.

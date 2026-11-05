@@ -20,7 +20,9 @@ The agent detects the stack, sets eight profile flags (auth, supabase, payments,
 - **Privacy and data:** GDPR rights and data minimization.
 - **Operations and release:** dependencies, resilience, abuse and moderation, deployment, accessibility basics.
 
-A separate `references/stress-tests.md` has 11 defensive scenarios (`ST-01` to `ST-11`), such as cross-tenant access, webhook replay, a client-trusted role, and prompt injection through tool output. Each is a "verify the code defends against X" check with a local-only repro. The output follows `references/report-template.md`: a verdict, status and severity counts, top findings with `path:line` evidence, a full check table, and unknowns to resolve.
+For AI features the agent also builds an inventory of each feature's declared never-behaviors, input channels, tools, runtime blocks and last adversarial test, and answers three governance questions in the report. AI findings are point-in-time; the report never claims an AI feature is safe.
+
+A separate `references/stress-tests.md` has 14 defensive scenarios (`ST-01` to `ST-14`), such as cross-tenant access, webhook replay, a client-trusted role, prompt injection through tool output, a stranger instructing a connected agent, and a benign instruction with a destructive outcome. Each is a "verify the code defends against X" check with a local-only repro. The output follows `references/report-template.md`: a verdict, status and severity counts, top findings with `path:line` evidence, a full check table, and unknowns to resolve.
 
 ## How To Use It
 

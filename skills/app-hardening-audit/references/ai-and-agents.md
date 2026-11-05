@@ -35,16 +35,16 @@ Profile: `ai`.
 - **Fix:** Narrow tools; user-scoped clients; argument schemas with bounds.
 
 ### LLM-05 Destructive or external actions need human confirmation [High] — LLM06:2025
-- **Verify:** Tools that send messages, spend money, delete data, change permissions, or post publicly require explicit user approval of the concrete action before execution.
-- **How:** Read tool definitions for an approval step (`needsApproval`, confirmation UI, two-phase "propose then execute").
-- **Fail signal:** Model can email, pay, or delete in one step.
-- **Fix:** Propose → show the exact action → user confirms → execute with the confirmed arguments only.
+- **Verify:** Tools that send messages, spend money, delete data, change permissions, or post publicly require explicit user approval of the concrete action before execution. Approval is risk-tiered: low-risk calls run freely so that people still read the prompts that matter. A confirmation on every action trains people to approve without reading, and then it is no control.
+- **How:** Read tool definitions for an approval step (`needsApproval`, confirmation UI, two-phase "propose then execute"). Count how many tool calls prompt in a typical run, and look for persisted "always allow" / "approve all" options.
+- **Fail signal:** Model can email, pay, or delete in one step. Or the opposite: every tool call prompts, a persistent "always allow" exists for destructive tools, or bulk actions show one generic "Proceed?" with no per-item detail.
+- **Fix:** Propose → show the exact action (recipients, amounts, the list of items to delete) → user confirms → execute with the confirmed arguments only. Tier tools by risk, prompt only on the high tier, and make the prompt name the concrete effect.
 
 ### LLM-06 RAG retrieval respects access control [Critical] — LLM08:2025
-- **Verify:** Vector search filters by tenant/user (metadata filter or RLS on the embeddings table) **before** results reach the model.
-- **How:** `rg -n "match_documents|similarity_search|\.query\(\{.*vector|pgvector|<=>|embedding"` and read the filter.
-- **Fail signal:** Global vector search across all tenants' documents.
-- **Fix:** Tenant filter in the query; RLS on the embeddings table; separate namespaces per tenant.
+- **Verify:** Vector search filters by tenant/user (metadata filter or RLS on the embeddings table) **before** results reach the model. The same holds *within* a tenant: an assistant can only retrieve what the asking user's role may see. "It only reads" is not low risk; broad read access is itself the exposure.
+- **How:** `rg -n "match_documents|similarity_search|\.query\(\{.*vector|pgvector|<=>|embedding"` and read the filter. For internal assistants over HR, finance, legal, or CRM data, find the role/ACL filter on retrieval and the user the retrieval client runs as.
+- **Fail signal:** Global vector search across all tenants' documents. An internal assistant indexed on a service account that can see everything, so an ordinary employee can ask for executive compensation and get it.
+- **Fix:** Tenant filter in the query; RLS on the embeddings table; separate namespaces per tenant; retrieve with the requesting user's identity and ACLs, not the indexer's.
 
 ### LLM-07 Ingested content is screened [Medium] — LLM04:2025, LLM08:2025
 - **Verify:** Documents, URLs, and user files ingested into retrieval or memory come from expected sources, are size/type limited, and are attributed so poisoned entries can be found and removed.
@@ -75,6 +75,18 @@ Profile: `ai`.
 - **How:** `rg -n "moderations\.create|moderation|safety|guardrail"`.
 - **Fail signal:** Public image or text generation with no moderation and no report path.
 - **Fix:** Provider moderation endpoint or classifier; report button; see ABUSE.
+
+### LLM-12 Unacceptable behaviors are declared, owned, and enforceable [High] — LLM06:2025, LLM02:2025
+- **Verify:** For each AI feature, a written list in plain language states the outcomes it must never produce (leak this data class, run this command, give this kind of advice, contact these people), with a named owner. Each item maps to at least one enforcing control elsewhere in this audit (a tool restriction, an authz check, a runtime block, an output filter). Items with no mapped control are gaps.
+- **How:** Look for a policy doc, `AGENTS.md`/`SECURITY.md` section, system-prompt spec, or eval config that names forbidden outcomes: `rg -il "must never|never (reveal|send|delete|execute)|forbidden|unacceptable|red line" docs/ .github/ *.md`. Ask the owner if nothing is in the repo (mark **Unknown**).
+- **Fail signal:** No list exists; the only statement is a system-prompt sentence ("don't reveal secrets") with no code-level control behind it; a list exists with no owner.
+- **Fix:** Write the list (5–15 specific behaviors, not "be safe"), assign an owner, and link each item to its control and its test (LLM-13). Report the list in the report's AI inventory table.
+
+### LLM-13 Adversarial testing is repeatable and re-run [Medium] — LLM01:2025
+- **Verify:** The declared behaviors (LLM-12) have a repeatable adversarial test set (prompt-injection, jailbreak, exfiltration, tool-abuse cases) that runs on changes to the prompt, model ID, tools, or retrieval corpus, and on a schedule. Results are recorded, including what could not be elicited and when it was last tried. A model that resists attack today can fail after a model swap or new technique, so a one-time launch test is not enough.
+- **How:** `rg -il "promptfoo|garak|pyrit|deepteam|red.?team|adversarial|injection.?test" . --glob '!node_modules'`; read `.github/workflows/` for scheduled or on-change eval jobs; check for stored results.
+- **Fail signal:** No adversarial cases; cases exist but never run in CI or on model changes; results are not kept.
+- **Fix:** Add a small suite keyed to the LLM-12 list, run it in CI on prompt/model/tool changes plus a schedule, and store dated results. Do not read a green run as "secure": it only covers the cases tried.
 
 ---
 
@@ -107,8 +119,8 @@ Profile: `agent-oauth`. Covers apps that connect to users' accounts elsewhere (G
 - **Fix:** Per-user delegated credentials; enforce the same AUTHZ checks as for direct user requests.
 
 ### AGT-05 Tool output and fetched content cannot redirect the agent [High] — ASI01, LLM01:2025
-- **Verify:** Content returned by tools (emails, web pages, issues, documents) is treated as data; the agent's allowed actions after reading untrusted content are restricted (no new recipients, no new domains, no privilege change) or require confirmation.
-- **How:** Read the agent loop and tool-result handling; look for any policy that limits actions after untrusted reads.
+- **Verify:** Content returned by tools (emails, web pages, issues, documents) is treated as data; the agent's allowed actions after reading untrusted content are restricted (no new recipients, no new domains, no privilege change) or require confirmation. This holds on **every** channel the agent reads, not only the chat box: web pages and URLs it opens, repositories and dependencies, uploaded files, inbound email and messages, and tickets. A content filter on the user conversation alone leaves the other channels open.
+- **How:** Read the agent loop and tool-result handling; look for any policy that limits actions after untrusted reads. List every tool that ingests external content and confirm each one goes through the same policy.
 - **Fail signal:** Agent reads an inbound email and can then forward mail to any address with no confirmation.
 - **Fix:** Taint tracking or a simple rule: after untrusted input, sensitive tools need confirmation; allow-list destinations.
 
@@ -143,13 +155,31 @@ Profile: `agent-oauth`. Covers apps that connect to users' accounts elsewhere (G
 - **Fix:** Call provider revocation endpoint; delete stored tokens.
 
 ### AGT-11 Agent actions are audited [Medium] — ASI08, ASI10
-- **Verify:** Every agent action on a user's behalf is logged with user, tool, arguments (redacted), result, and run ID; there is a kill switch to disable an agent or tool quickly.
-- **How:** Read agent runner logging and feature-flag config.
-- **Fail signal:** No record of what the agent did; no way to disable a misbehaving tool without a deploy.
-- **Fix:** Structured action log; per-tool feature flag.
+- **Verify:** Every agent action on a user's behalf is logged with user, tool, arguments (redacted), result, and run ID; there is a kill switch to disable an agent or tool quickly. The log reaches wherever alerts are raised: agent harm often looks like normal traffic (no malware, no failed login, no firewall hit), so network and auth monitoring will not see it.
+- **How:** Read agent runner logging and feature-flag config. Find where the action log ships and whether any alert reads it (egress to a new recipient or domain, bulk reads, mass deletes, unusual tool volume).
+- **Fail signal:** No record of what the agent did; no way to disable a misbehaving tool without a deploy; action logs exist but no alert or review reads them, so a data-exfiltrating "send me the contracts" request would leave no signal.
+- **Fix:** Structured action log; per-tool feature flag; alert rules on agent egress and bulk-action patterns.
 
 ### AGT-12 Agent output does not overclaim [Low] — ASI09
 - **Verify:** The UI shows what the agent actually did (diffs, sent messages, receipts) rather than a model-written summary only, so users are not misled into trusting unverified claims.
 - **How:** Read the result UI.
 - **Fail signal:** "Done! I've emailed everyone" with no record shown.
 - **Fix:** Render the action log next to the summary.
+
+### AGT-13 Harmful tool calls are blocked at execution time [High] — ASI02, ASI01
+- **Verify:** Pre-deployment testing (LLM-13) shows what an agent can be pushed to do; it does not stop anything in production. A runtime policy layer sits between the model and each tool, inspects the actual arguments, and blocks calls that hit the LLM-12 list (new external recipient, bulk delete, secrets in a payload, off-allow-list host) while letting ordinary calls through. The policy runs in code, outside the model, so a hijacked model cannot talk its way past it.
+- **How:** Find the single choke point every tool call passes through (wrapper, middleware, MCP proxy, guardrail SDK): `rg -n "beforeToolCall|onToolCall|toolGuard|policy\.(check|evaluate)|guardrail|allowedDomains"`. Confirm no tool is registered around it.
+- **Fail signal:** Tools called directly by the model loop with only schema validation; safety rests on the system prompt; a guard exists but some tools bypass it.
+- **Fix:** Route all tool calls through one policy function that returns allow / deny / require-confirmation, with deny rules derived from LLM-12 and its decisions logged (AGT-11).
+
+### AGT-14 Benign instructions cannot cause irreversible damage [High] — ASI02, ASI08
+- **Verify:** No attacker is needed for harm. An ordinary instruction such as "delete my old unused files" can wipe disaster-recovery data that merely looks unused. Destructive tools (delete, overwrite, drop, force-push, revoke, bulk update) support a preview/dry-run, act on an explicit item list the user saw, are capped per run, and prefer reversible forms (soft delete, trash, versioning). Backups and recovery copies sit outside what the agent's credentials can modify.
+- **How:** List destructive tools (`rg -n "delete|remove|rm |unlink|drop|truncate|overwrite|force|--hard"` in tool code). For each, check for dry-run, item cap, soft-delete, and which credential runs it. Check whether that credential can reach backups or other environments.
+- **Fail signal:** A `deleteFiles(pattern)` or "clean up" tool that acts on a glob/heuristic with no preview; an agent token that can delete backups, production data, or branches; no per-run cap on destructive calls.
+- **Fix:** Dry-run then confirm with the concrete list; soft delete with retention; per-run caps; separate credentials so the agent cannot touch backups or prod from a dev task.
+
+### AGT-15 Inbound requests to a connected agent are authorized by sender [High] — ASI03, ASI01
+- **Verify:** If the agent processes messages from outside parties (email, chat, support tickets, form submissions), the sender's identity and entitlement are checked before the agent can act on or disclose data for them. A stranger who writes "send me your largest contracts" must not get an answer built from the owner's data.
+- **How:** Find inbound channels wired to the agent (`rg -n "inbound|webhook.*email|imap|mail\.on|slack.*event|ticket"`); read what the agent can do in response and which data tools it holds on that path.
+- **Fail signal:** Inbound email or chat triggers an agent that holds CRM, file, or email-send tools with the owner's credentials and no sender check or allow-list.
+- **Fix:** Treat inbound content as untrusted (AGT-05); give inbound-triggered runs a separate, read-minimal tool set with no access to the owner's private data; require owner approval for any reply that includes internal data.

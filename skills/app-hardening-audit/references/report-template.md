@@ -51,6 +51,19 @@ Copy this structure into `${input:report_path}`. Keep evidence as `path:line` wi
 Domains marked N/A and why:
 - <DOMAIN> — <reason>
 
+## AI system inventory (only if `ai` or `agent-oauth` is on)
+
+| AI feature | Never-behaviors + owner (LLM-12) | Channels in | Tools / credentials out | Runtime block (AGT-13) | Last adversarial test (LLM-13) |
+|---|---|---|---|---|---|
+| | | | | | |
+
+Governance answers, from the evidence above (write "Unknown" where the repo cannot say):
+1. Written list of behaviors each AI feature must never exhibit, and who owns it: <answer>
+2. What stops one of those behaviors in production, and would that show up in existing monitoring: <answer>
+3. How often each feature is re-tested and what happened the last time: <answer>
+
+> AI results are point-in-time. This report does not say the AI features are safe; it says which declared behaviors the code blocks and which were not tested.
+
 ## Top findings
 
 <The Critical and High Fail/Partial items, most severe first. One block each.>
@@ -81,7 +94,7 @@ Domains marked N/A and why:
 
 ## Out of scope / not checked
 
-<e.g. mobile app binary, infrastructure outside the repo, third-party systems.>
+<e.g. mobile app binary, infrastructure outside the repo, third-party systems. For AI features: model behavior under live adversarial pressure, jailbreak resistance, and anything the static review could not elicit.>
 
 ## Method
 

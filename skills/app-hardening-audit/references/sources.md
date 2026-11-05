@@ -75,6 +75,10 @@ Articles 5, 12, 17, and 33 were read for this skill; the other article titles ar
 - **W3C WCAG 2.2** — https://www.w3.org/TR/WCAG22/
   Success criteria cited: 1.1.1, 1.3.1, 1.4.3, 2.1.1, 2.4.2, 2.4.7, 2.4.11, 3.1.1, 3.3.1, 3.3.2, 3.3.8, 4.1.2.
 
+## Vendor framing (not a standard)
+
+- **"AI Security 101: AI Security Is Not Cybersecurity"** (Gray Swan AI executive eBook, dated 9 July 2026, 7 pages). Vendor material, used only for framing: AI red teaming works from declared unacceptable behaviors rather than a coverage list; no all-clear for a stochastic system; security is a point-in-time result needing continuous re-testing; runtime enforcement on tool calls alongside pre-deployment testing; untrusted input arrives on every channel the agent reads; read-only access is still exposure; harm can occur with no attacker; approval fatigue weakens human-in-the-loop. It cites no standard IDs, and its claims are not independently verified here. LLM-12, LLM-13, AGT-13 to AGT-15, ST-12 to ST-14 and the LLM-05, LLM-06, AGT-05, AGT-11 edits come from it and are mapped to the OWASP IDs above.
+
 ## Not used / not verified
 
 - Vendor-specific numbers that change often (rate-limit defaults, plan quotas) are not stated as facts; the checks tell the auditor to read the project's config instead.
