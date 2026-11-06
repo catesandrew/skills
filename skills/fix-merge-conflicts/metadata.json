@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "November 2026",
+  "abstract": "Resolves merge conflicts non-interactively with minimal correctness-first edits, regenerates lockfiles with tooling, validates build and tests, and stages the result without pushing.",
+  "category": "delivery-workflow",
+  "source": "https://github.com/cursor/plugins/tree/main/cursor-team-kit/skills/fix-merge-conflicts (MIT, adapted)"
+}

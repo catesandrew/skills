@@ -1,0 +1,23 @@
+{
+  "name": "@catesworks/skill-thermo-nuclear-code-quality-review",
+  "version": "1.0.0",
+  "description": "An extremely strict maintainability review that hunts for structural simplification, file-size blowups, spaghetti branching, leaky abstractions, and type-boundary problems, and withholds approval…",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "scripts/**",
+    "template/**",
+    "templates/**",
+    "remotion/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

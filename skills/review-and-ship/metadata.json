@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "November 2026",
+  "abstract": "Reviews the current branch for bugs, regressions, security, and intent fit, runs or writes targeted tests, commits focused work, and opens or updates a PR.",
+  "category": "delivery-workflow",
+  "source": "https://github.com/cursor/plugins/tree/main/cursor-team-kit/skills/review-and-ship (MIT, adapted)"
+}

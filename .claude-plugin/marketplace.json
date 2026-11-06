@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "cw",
-      "description": "69 skills, distributed via the cw plugin command prefix.",
+      "description": "73 skills, distributed via the cw plugin command prefix.",
       "source": "./",
       "strict": false,
       "skills": [
@@ -38,6 +38,7 @@
         "./skills/dithered-motif-site",
         "./skills/excel-like-table-navigation",
         "./skills/five-act-scroll-story",
+        "./skills/fix-merge-conflicts",
         "./skills/frame-sequence-scrub-site",
         "./skills/frontend-quality-loop",
         "./skills/frontend-scaffold",
@@ -68,15 +69,18 @@
         "./skills/react-ref-callbacks",
         "./skills/react-use-state",
         "./skills/reflect-instructions",
+        "./skills/review-and-ship",
         "./skills/runbook-from-corpus",
         "./skills/scroll-video-site",
         "./skills/session-wrap",
         "./skills/spec-kit-skill",
         "./skills/swagger",
         "./skills/tanstack-table-patterns",
+        "./skills/thermo-nuclear-code-quality-review",
         "./skills/tsdoc",
         "./skills/typescript-type-safety",
         "./skills/ui-engineer",
+        "./skills/verify-this",
         "./skills/zod-repair",
         "./skills/zustand-patterns"
       ]

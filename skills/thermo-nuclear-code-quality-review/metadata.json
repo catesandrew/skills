@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "November 2026",
+  "abstract": "An extremely strict maintainability review that hunts for structural simplification, file-size blowups, spaghetti branching, leaky abstractions, and type-boundary problems, and withholds approval until they are fixed.",
+  "category": "delivery-workflow",
+  "source": "https://github.com/cursor/plugins/tree/main/cursor-team-kit/skills/thermo-nuclear-code-quality-review (MIT, adapted)"
+}

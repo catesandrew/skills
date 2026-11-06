@@ -1,0 +1,23 @@
+{
+  "name": "@catesworks/skill-review-and-ship",
+  "version": "1.0.0",
+  "description": "Reviews the current branch for bugs, regressions, security, and intent fit, runs or writes targeted tests, commits focused work, and opens or updates a PR.",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "scripts/**",
+    "template/**",
+    "templates/**",
+    "remotion/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

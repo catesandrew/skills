@@ -68,6 +68,8 @@ importers:
 
   packages/skill-five-act-scroll-story: {}
 
+  packages/skill-fix-merge-conflicts: {}
+
   packages/skill-frame-sequence-scrub-site: {}
 
   packages/skill-frontend-quality-loop: {}
@@ -128,6 +130,8 @@ importers:
 
   packages/skill-reflect-instructions: {}
 
+  packages/skill-review-and-ship: {}
+
   packages/skill-runbook-from-corpus: {}
 
   packages/skill-scroll-video-site: {}
@@ -140,11 +144,15 @@ importers:
 
   packages/skill-tanstack-table-patterns: {}
 
+  packages/skill-thermo-nuclear-code-quality-review: {}
+
   packages/skill-tsdoc: {}
 
   packages/skill-typescript-type-safety: {}
 
   packages/skill-ui-engineer: {}
+
+  packages/skill-verify-this: {}
 
   packages/skill-zod-repair: {}
 

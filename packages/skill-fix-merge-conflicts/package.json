@@ -1,0 +1,23 @@
+{
+  "name": "@catesworks/skill-fix-merge-conflicts",
+  "version": "1.0.0",
+  "description": "Resolves merge conflicts non-interactively with minimal correctness-first edits, regenerates lockfiles with tooling, validates build and tests, and stages the result without pushing.",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "scripts/**",
+    "template/**",
+    "templates/**",
+    "remotion/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

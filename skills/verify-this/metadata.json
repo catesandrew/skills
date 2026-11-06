@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "organization": "Personal",
+  "date": "November 2026",
+  "abstract": "Proves or disproves a specific claim with fresh local evidence: restates it falsifiably, captures baseline and treatment, compares raw artifacts, and returns exactly one verdict.",
+  "category": "delivery-workflow",
+  "source": "https://github.com/cursor/plugins/tree/main/cursor-team-kit/skills/verify-this (MIT, adapted)"
+}

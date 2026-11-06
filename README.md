@@ -121,6 +121,10 @@ pnpm --filter website start
 | `pr-ado-open` | Open an Azure DevOps PR with structured description, linked work items, reviewers, and auto-complete policy |
 | `pr-ado-code-review` | Review an Azure DevOps pull request — correctness, security, performance, style via `az repos` |
 | `ai-governance` | Add AI attribution trailers on commit and generate session reports on PR creation |
+| `fix-merge-conflicts` | Resolve merge conflicts non-interactively, regenerate lockfiles, validate build and tests, stage without pushing (adapted from [cursor/plugins](https://github.com/cursor/plugins), MIT) |
+| `review-and-ship` | Final branch review for bugs, intent fit, and test coverage, then focused commits and a PR opened or updated (adapted from cursor/plugins, MIT) |
+| `thermo-nuclear-code-quality-review` | Extremely strict maintainability review — code-judo simplification, 1k-line files, spaghetti branching, leaky abstractions (adapted from cursor/plugins, MIT) |
+| `verify-this` | Prove or disprove a claim with baseline/treatment evidence; verdict is VERIFIED, NOT VERIFIED, or INCONCLUSIVE (adapted from cursor/plugins, MIT) |
 
 ### Planning, docs & meta
 

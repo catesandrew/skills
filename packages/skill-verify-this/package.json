@@ -1,0 +1,23 @@
+{
+  "name": "@catesworks/skill-verify-this",
+  "version": "1.0.0",
+  "description": "Proves or disproves a specific claim with fresh local evidence: restates it falsifiably, captures baseline and treatment, compares raw artifacts, and returns exactly one verdict.",
+  "files": [
+    "SKILL.md",
+    "metadata.json",
+    "references/**",
+    "README.md",
+    "agents/**",
+    "scripts/**",
+    "template/**",
+    "templates/**",
+    "remotion/**",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}
