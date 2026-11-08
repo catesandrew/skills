@@ -1,0 +1,1 @@
+- [Vercel deploys are manual](vercel-manual-deploys.md) — docs site deploys only via the vercel-deploy workflow, not on push

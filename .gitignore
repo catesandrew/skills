@@ -13,3 +13,4 @@ website/.docusaurus/
 
 __pycache__/
 *.pyc
+website/static/skills-zips/

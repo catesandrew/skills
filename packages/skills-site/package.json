@@ -1,0 +1,24 @@
+{
+  "name": "@catesworks/skills-site",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "Docusaurus plugin and React components: a skills browser (card grid, category rail, detail dialog, zip download) for skills repos.",
+  "exports": {
+    "./plugin": "./src/plugin.ts",
+    "./SkillsBrowser": "./src/SkillsBrowser.tsx"
+  },
+  "dependencies": {
+    "fflate": "^0.8.2"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@docusaurus/types": "3.10.2",
+    "@types/react": "^19.0.0",
+    "react": "^19.0.0",
+    "typescript": "~6.0.2"
+  }
+}
