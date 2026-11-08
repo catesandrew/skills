@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.0.0",
   "organization": "Personal",
   "date": "November 2026",
   "abstract": "Runs a checklist-driven security and launch-readiness audit of an app codebase (especially Supabase / Next.js / Stripe / LLM stacks): detects the stack and app profile, runs domain checks for auth, RLS, secrets, endpoints, headers, payments, entitlements, cost exhaustion, AI/LLM and agent delegation, privacy, supply chain, operations, abuse, deployment and accessibility, plus defensive stress-test scenarios, and writes a Pass/Fail/N/A findings report with file:line evidence and fixes. Static and local by default; findings, not certification.",
