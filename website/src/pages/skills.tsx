@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import {usePluginData} from '@docusaurus/useGlobalData';
-import SkillsBrowser, {type Catalog} from '@catesworks/skills-site/SkillsBrowser';
+import SkillsBrowser, {type Catalog} from '@cogs/skills-site/SkillsBrowser';
 
 export default function Skills(): ReactNode {
   const catalog = usePluginData('skills-site') as Catalog;
