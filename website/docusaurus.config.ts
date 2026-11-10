@@ -40,7 +40,7 @@ const config: Config = {
   markdown: {mermaid: true},
 
   plugins: [
-    ['@catesworks/skills-site/plugin', {installTemplate: 'skills add -g catesandrew/skills --skill skills/{name}'}],
+    ['@cogs/skills-site/plugin', {installTemplate: 'skills add -g catesandrew/skills --skill skills/{name}'}],
   ],
   themes: [
     '@docusaurus/theme-mermaid',
