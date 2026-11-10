@@ -1,6 +1,6 @@
 ---
 title: Verify This
-description: Proves or disproves a specific claim with fresh local evidence: restates it falsifiably, captures baseline and treatment, compares raw artifacts, and returns exactly one verdict.
+description: "Proves or disproves a specific claim with fresh local evidence: restates it falsifiably, captures baseline and treatment, compares raw artifacts, and returns exactly one verdict."
 ---
 
 # verify-this

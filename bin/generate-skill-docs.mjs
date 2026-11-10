@@ -207,6 +207,18 @@ function runCheck(skillNames) {
     process.exit(1);
   }
 
+  // An unquoted `key: value: more` scalar breaks the Docusaurus build; catch it here.
+  const badFrontmatter = skillNames.filter((name) => {
+    const fm = readFileSync(join(DEEP_DIVE_DIR, `${name}.md`), 'utf8').match(/^---\n([\s\S]*?)\n---/)?.[1] ?? '';
+    return fm.split('\n').some((l) => /^[\w-]+: [^"'>|\[{&*!%@`#].*: /.test(l));
+  });
+  if (badFrontmatter.length > 0) {
+    console.error(`\n  generate-skill-docs --check: FAILED`);
+    console.error(`  unquoted ": " inside front matter value (wrap the value in double quotes):`);
+    for (const name of badFrontmatter) console.error(`    - website/docs/skills/${name}.md`);
+    console.error('');
+    process.exit(1);
+  }
   console.log(`\n  generate-skill-docs --check: OK — ${skillNames.length} skill(s), website/docs/skills-catalog.md is in sync, all deep-dive pages present.\n`);
 }
 
